@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bc2xa5e13l7nl"]
+[gd_scene load_steps=5 format=3 uid="uid://bc2xa5e13l7nl"]
 
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_isluj"]
 [ext_resource type="TileSet" uid="uid://ql3ldccgowc4" path="res://scenes/world.tres" id="1_l66ny"]
+[ext_resource type="PackedScene" uid="uid://re7uc5qnsekn" path="res://scenes/scholar.tscn" id="3_pcu8y"]
+[ext_resource type="Script" path="res://scripts/scholar.gd" id="4_tge2n"]
 
 [node name="level2" type="Node2D"]
 script = ExtResource("1_isluj")
@@ -20,3 +22,7 @@ tile_set = ExtResource("1_l66ny")
 y_sort_enabled = true
 use_parent_material = true
 tile_set = ExtResource("1_l66ny")
+
+[node name="scholar" parent="." instance=ExtResource("3_pcu8y")]
+position = Vector2(75, 7)
+script = ExtResource("4_tge2n")
