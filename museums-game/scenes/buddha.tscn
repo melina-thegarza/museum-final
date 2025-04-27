@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://d70rdyi3d6pp"]
+
+[ext_resource type="Texture2D" uid="uid://b7cr2rfpe1ehm" path="res://art/objects/buddha.png" id="1_feu7g"]
+[ext_resource type="Script" path="res://scripts/buddha.gd" id="1_ksspf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v06ok"]
+radius = 58.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e13ck"]
+size = Vector2(51.6875, 71.5)
+
+[sub_resource type="Theme" id="Theme_4gj44"]
+
+[node name="buddha" type="CharacterBody2D"]
+script = ExtResource("1_ksspf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_feu7g")
+
+[node name="detection_area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
+position = Vector2(4, 14)
+shape = SubResource("CircleShape2D_v06ok")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 31.25)
+shape = SubResource("RectangleShape2D_e13ck")
+
+[node name="buddha_button" type="Button" parent="."]
+offset_left = -75.0
+offset_top = 51.0
+offset_right = 85.0
+offset_bottom = 71.0
+theme = SubResource("Theme_4gj44")
+theme_override_font_sizes/font_size = 8
+text = "Click to play as: Buddha Maitreya (Mile)"
+
+[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
+[connection signal="pressed" from="buddha_button" to="." method="_on_buddha_button_pressed"]
