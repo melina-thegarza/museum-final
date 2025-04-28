@@ -27,6 +27,7 @@ func _physics_process(delta: float) -> void:
 	
 
 func player_movement(delta):
+	
 	if Input.is_action_pressed("ui_right"):
 		current_dir = "right"
 		play_anim(1)

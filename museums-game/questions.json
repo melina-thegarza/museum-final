@@ -1,0 +1,17 @@
+[
+	{
+		"question": "What is the primary role prophesied for Maitreya in Buddhist traditions?",
+		"answers": ["(a) Be powerful king", "(b) Be the next Buddha to appear", "(c) Guide deceased souls", "(d) Protect existing teachings"],
+		"correct_answer": "(b) Be the next Buddha to appear"
+	},
+	{
+		"question": "According to Buddhist beliefs, who is Maitreya's direct predecessor?",
+		"answers": ["(a) Amitabha Buddha", "(b) Avalokiteśvara", "(c) Gautama Buddha", "(d) Mahākāśyapa"],
+		"correct_answer": "(c) Gautama Buddha"
+	},
+	{
+		"question": "What is the Sanskrit root meaning of the name \"Maitreya\"?",
+		"answers": ["(a) \"Wisdom.\"", "(b) \"Compassion.\"", "(c) \"Friendship.\"", "(d) \"Enlightenment.\""],
+		"correct_answer": "(c) \"Friendship.\""
+	}
+]

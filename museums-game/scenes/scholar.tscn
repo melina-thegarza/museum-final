@@ -1,6 +1,7 @@
-[gd_scene load_steps=34 format=3 uid="uid://re7uc5qnsekn"]
+[gd_scene load_steps=35 format=3 uid="uid://re7uc5qnsekn"]
 
-[ext_resource type="Texture2D" uid="uid://b6k85pvms647d" path="res://art/characters/nerd.png" id="1_kgthi"]
+[ext_resource type="Texture2D" uid="uid://t6vy2eho8kxb" path="res://art/characters/nerd.png" id="1_kgthi"]
+[ext_resource type="Script" path="res://scripts/scholar.gd" id="1_rd3f1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o36fq"]
 atlas = ExtResource("1_kgthi")
@@ -42,23 +43,23 @@ region = Rect2(192, 288, 48, 48)
 atlas = ExtResource("1_kgthi")
 region = Rect2(240, 288, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_36ch3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xvsh"]
 atlas = ExtResource("1_kgthi")
 region = Rect2(48, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i0etp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcn5x"]
 atlas = ExtResource("1_kgthi")
 region = Rect2(96, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ysrs7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_c513o"]
 atlas = ExtResource("1_kgthi")
 region = Rect2(144, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_57snh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ougoy"]
 atlas = ExtResource("1_kgthi")
 region = Rect2(192, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ww1ef"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_icj7d"]
 atlas = ExtResource("1_kgthi")
 region = Rect2(240, 48, 48, 48)
 
@@ -166,19 +167,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_36ch3")
+"texture": SubResource("AtlasTexture_7xvsh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i0etp")
+"texture": SubResource("AtlasTexture_pcn5x")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ysrs7")
+"texture": SubResource("AtlasTexture_c513o")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_57snh")
+"texture": SubResource("AtlasTexture_ougoy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ww1ef")
+"texture": SubResource("AtlasTexture_icj7d")
 }],
 "loop": true,
 "name": &"front_idle",
@@ -246,15 +247,23 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nt478"]
-radius = 6.0
+radius = 6.08276
 
 [node name="scholar" type="CharacterBody2D"]
 position = Vector2(14, -3)
+collision_mask = 3
+script = ExtResource("1_rd3f1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0b6tt")
 animation = &"back_walk"
+frame_progress = 0.0263474
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-16, 5)
+position = Vector2(-15, 3)
 shape = SubResource("CircleShape2D_nt478")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(8, 8)
+limit_smoothed = true
+rotation_smoothing_enabled = true

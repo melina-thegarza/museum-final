@@ -6,7 +6,7 @@ var selected_object = null
 
 
 var object_scene = preload("res://scenes/level_2.tscn").instantiate()
-
+var can_move = true
 
 
 func _add_a_scene_manually(node):
