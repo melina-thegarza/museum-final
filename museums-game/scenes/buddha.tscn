@@ -6,8 +6,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_v06ok"]
 radius = 58.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e13ck"]
-size = Vector2(51.6875, 71.5)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5qnj7"]
+radius = 15.0
+height = 72.0
 
 [sub_resource type="Theme" id="Theme_4gj44"]
 
@@ -26,8 +27,8 @@ position = Vector2(4, 14)
 shape = SubResource("CircleShape2D_v06ok")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 31.25)
-shape = SubResource("RectangleShape2D_e13ck")
+position = Vector2(0, 21)
+shape = SubResource("CapsuleShape2D_5qnj7")
 
 [node name="buddha_button" type="Button" parent="."]
 offset_left = -75.0

@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://c2k27x321o05l"]
+[gd_scene load_steps=6 format=4 uid="uid://c2k27x321o05l"]
 
 [ext_resource type="TileSet" uid="uid://ql3ldccgowc4" path="res://scenes/world.tres" id="1_71wc8"]
-[ext_resource type="PackedScene" uid="uid://bcbo40pwasr3u" path="res://scenes/enemy.tscn" id="3_jiunm"]
 [ext_resource type="PackedScene" uid="uid://c1uvqubadhbxo" path="res://scenes/mask.tscn" id="4_l8e41"]
 [ext_resource type="PackedScene" uid="uid://b7kbqhm4dvg0u" path="res://scenes/player.tscn" id="4_lr5cl"]
 [ext_resource type="PackedScene" uid="uid://d70rdyi3d6pp" path="res://scenes/buddha.tscn" id="5_u8crf"]
@@ -27,17 +26,6 @@ tile_set = ExtResource("1_71wc8")
 
 [node name="player" parent="." instance=ExtResource("4_lr5cl")]
 position = Vector2(121, 255)
-
-[node name="enemies" type="Node" parent="."]
-
-[node name="enemy" parent="enemies" instance=ExtResource("3_jiunm")]
-position = Vector2(532, 183)
-
-[node name="enemy2" parent="enemies" instance=ExtResource("3_jiunm")]
-position = Vector2(443, 155)
-
-[node name="enemy3" parent="enemies" instance=ExtResource("3_jiunm")]
-position = Vector2(467, 254)
 
 [node name="museum_objects" type="Node" parent="."]
 

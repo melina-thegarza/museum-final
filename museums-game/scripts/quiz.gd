@@ -7,8 +7,12 @@ var answer_areas = []
 var selected_answer_area = null
 @onready var question_label = $question_area/question_label
 @onready var feedback_label = $feedback_label
+@onready var exit_button = $back_button
 
 func _ready():
+	#hide exit
+	exit_button.visible = false
+	
 	#load questions from json file
 	_load_questions()
 	
@@ -45,6 +49,8 @@ func _load_question():
 		question_label.text = "Quiz Finished! Your score: " + str(score)
 		for area in answer_areas:
 			area.visible = false
+		exit_button.visible = true
+		exit_button.disabled = false
 
 func _set_selected_answer(answer):
 	selected_answer_area = answer
@@ -113,3 +119,7 @@ func _on_answer_d_body_entered(body: Node2D) -> void:
 
 func _on_answer_d_body_exited(body: Node2D) -> void:
 	_unset_selected_answer($answers/answerD)
+
+
+func _on_back_button_pressed() -> void:
+	Global._return_to_buddha_selection()

@@ -24,7 +24,7 @@ use_parent_material = true
 tile_set = ExtResource("1_l66ny")
 
 [node name="scholar" parent="." instance=ExtResource("3_pcu8y")]
-position = Vector2(75, 7)
+position = Vector2(21, 4)
 
 [node name="kid" parent="." instance=ExtResource("5_up3qp")]
-position = Vector2(8, 82)
+position = Vector2(-20, 4)

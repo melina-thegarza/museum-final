@@ -48,5 +48,4 @@ func _on_kid_mouse_exited() -> void:
 
 
 func _on_start_pressed() -> void:
-	print(selected_char.name)
 	Global._transition_to_buddha_minigame(selected_char.name)

@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://cis5pv14jr32u" path="res://art/character_profiles/kid_profile.png" id="3_v40df"]
 
 [sub_resource type="FontFile" id="FontFile_a05p0"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/30/0/ascent = 0.0
 cache/0/30/0/descent = 0.0
 cache/0/30/0/underline_position = 0.0
@@ -58,6 +61,7 @@ texture = ExtResource("2_lpdsy")
 
 [node name="scholar_label" type="Label" parent="TextureRect/HBoxContainer/Scholar"]
 z_index = 2
+layout_mode = 0
 offset_left = -25.0
 offset_top = 177.0
 offset_right = 152.0
@@ -90,6 +94,7 @@ texture = ExtResource("3_v40df")
 
 [node name="kid_label" type="Label" parent="TextureRect/HBoxContainer/Kid"]
 z_index = 2
+layout_mode = 0
 offset_left = 305.0
 offset_top = 180.0
 offset_right = 436.0
