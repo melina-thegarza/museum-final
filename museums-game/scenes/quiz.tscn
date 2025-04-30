@@ -1,0 +1,239 @@
+[gd_scene load_steps=6 format=3 uid="uid://dyo162yw5lgcc"]
+
+[ext_resource type="Script" path="res://scripts/quiz.gd" id="1_meq4f"]
+[ext_resource type="PackedScene" uid="uid://re7uc5qnsekn" path="res://scenes/scholar.tscn" id="2_6105j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxulw"]
+size = Vector2(74.5, 36)
+
+[sub_resource type="Theme" id="Theme_gsfek"]
+
+[sub_resource type="FontFile" id="FontFile_6tfwa"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/2/0/ascent = 0.0
+cache/0/2/0/descent = 0.0
+cache/0/2/0/underline_position = 0.0
+cache/0/2/0/underline_thickness = 0.0
+cache/0/2/0/scale = 1.0
+cache/0/3/0/ascent = 0.0
+cache/0/3/0/descent = 0.0
+cache/0/3/0/underline_position = 0.0
+cache/0/3/0/underline_thickness = 0.0
+cache/0/3/0/scale = 1.0
+cache/0/4/0/ascent = 0.0
+cache/0/4/0/descent = 0.0
+cache/0/4/0/underline_position = 0.0
+cache/0/4/0/underline_thickness = 0.0
+cache/0/4/0/scale = 1.0
+cache/0/5/0/ascent = 0.0
+cache/0/5/0/descent = 0.0
+cache/0/5/0/underline_position = 0.0
+cache/0/5/0/underline_thickness = 0.0
+cache/0/5/0/scale = 1.0
+cache/0/6/0/ascent = 0.0
+cache/0/6/0/descent = 0.0
+cache/0/6/0/underline_position = 0.0
+cache/0/6/0/underline_thickness = 0.0
+cache/0/6/0/scale = 1.0
+cache/0/7/0/ascent = 0.0
+cache/0/7/0/descent = 0.0
+cache/0/7/0/underline_position = 0.0
+cache/0/7/0/underline_thickness = 0.0
+cache/0/7/0/scale = 1.0
+cache/0/8/0/ascent = 0.0
+cache/0/8/0/descent = 0.0
+cache/0/8/0/underline_position = 0.0
+cache/0/8/0/underline_thickness = 0.0
+cache/0/8/0/scale = 1.0
+cache/0/9/0/ascent = 0.0
+cache/0/9/0/descent = 0.0
+cache/0/9/0/underline_position = 0.0
+cache/0/9/0/underline_thickness = 0.0
+cache/0/9/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+cache/0/11/0/ascent = 0.0
+cache/0/11/0/descent = 0.0
+cache/0/11/0/underline_position = 0.0
+cache/0/11/0/underline_thickness = 0.0
+cache/0/11/0/scale = 1.0
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+
+[node name="quiz" type="Node2D"]
+position = Vector2(-1, -1)
+script = ExtResource("1_meq4f")
+
+[node name="answers" type="Node" parent="."]
+
+[node name="answerA" type="Area2D" parent="answers"]
+position = Vector2(-22, 58)
+collision_layer = 2
+
+[node name="Label" type="Label" parent="answers/answerA"]
+offset_left = -75.0
+offset_top = -16.0
+offset_right = -5.0
+offset_bottom = 17.0
+theme_override_font_sizes/font_size = 9
+text = "A)"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="answers/answerA"]
+position = Vector2(-41, 2)
+shape = SubResource("RectangleShape2D_xxulw")
+
+[node name="ColorRect" type="ColorRect" parent="answers/answerA"]
+z_index = -1
+offset_left = -78.0
+offset_top = -15.0
+offset_right = -3.0
+offset_bottom = 20.0
+color = Color(0.846975, 0.710732, 0.532971, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="answerB" type="Area2D" parent="answers"]
+position = Vector2(64, 58)
+
+[node name="Label" type="Label" parent="answers/answerB"]
+offset_left = -70.0
+offset_top = -13.0
+offset_right = 10.0
+offset_bottom = 20.0
+theme_override_font_sizes/font_size = 9
+text = "B)"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="answers/answerB"]
+position = Vector2(-30, 2)
+shape = SubResource("RectangleShape2D_xxulw")
+
+[node name="ColorRect" type="ColorRect" parent="answers/answerB"]
+z_index = -1
+offset_left = -68.0
+offset_top = -16.0
+offset_right = 7.0
+offset_bottom = 19.0
+color = Color(0.847059, 0.709804, 0.533333, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="answerC" type="Area2D" parent="answers"]
+position = Vector2(-23, 107)
+
+[node name="Label" type="Label" parent="answers/answerC"]
+offset_left = -77.0
+offset_top = -16.0
+offset_right = -5.0
+offset_bottom = 21.0
+theme_override_font_sizes/font_size = 9
+text = "C)"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="answers/answerC"]
+position = Vector2(-41, 2)
+shape = SubResource("RectangleShape2D_xxulw")
+
+[node name="ColorRect" type="ColorRect" parent="answers/answerC"]
+z_index = -1
+offset_left = -78.0
+offset_top = -15.0
+offset_right = -3.0
+offset_bottom = 20.0
+color = Color(0.847059, 0.709804, 0.533333, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="answerD" type="Area2D" parent="answers"]
+position = Vector2(76, 78)
+
+[node name="Label" type="Label" parent="answers/answerD"]
+offset_left = -80.0
+offset_top = 12.0
+offset_right = -2.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 9
+text = "D)"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="answers/answerD"]
+position = Vector2(-40.25, 30)
+shape = SubResource("RectangleShape2D_xxulw")
+
+[node name="ColorRect" type="ColorRect" parent="answers/answerD"]
+z_index = -1
+offset_left = -78.0
+offset_top = 13.0
+offset_right = -3.0
+offset_bottom = 48.0
+color = Color(0.847059, 0.709804, 0.533333, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="question_area" type="ColorRect" parent="."]
+offset_left = -96.0
+offset_top = -27.0
+offset_right = 68.0
+offset_bottom = 9.0
+
+[node name="question_label" type="Label" parent="question_area"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 7.0
+offset_right = 162.0
+offset_bottom = 31.0
+theme = SubResource("Theme_gsfek")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_6tfwa")
+theme_override_font_sizes/font_size = 9
+text = "question:..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="feedback_label" type="Label" parent="."]
+offset_left = -105.0
+offset_top = 9.0
+offset_right = 84.0
+offset_bottom = 32.0
+theme_override_colors/font_shadow_color = Color(0.593871, 0.368237, 1.92523e-07, 1)
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="scholar" parent="." instance=ExtResource("2_6105j")]
+position = Vector2(6, 40)
+scale = Vector2(1, 1.00505)
+
+[connection signal="body_entered" from="answers/answerA" to="." method="_on_answer_a_body_entered"]
+[connection signal="body_exited" from="answers/answerA" to="." method="_on_answer_a_body_exited"]
+[connection signal="body_entered" from="answers/answerB" to="." method="_on_answer_b_body_entered"]
+[connection signal="body_exited" from="answers/answerB" to="." method="_on_answer_b_body_exited"]
+[connection signal="body_entered" from="answers/answerC" to="." method="_on_answer_c_body_entered"]
+[connection signal="body_exited" from="answers/answerC" to="." method="_on_answer_c_body_exited"]
+[connection signal="body_entered" from="answers/answerD" to="." method="_on_answer_d_body_entered"]
+[connection signal="body_exited" from="answers/answerD" to="." method="_on_answer_d_body_exited"]

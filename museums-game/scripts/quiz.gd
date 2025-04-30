@@ -57,7 +57,7 @@ func _unset_selected_answer(answer):
 
 
 func _input(event):
-	if event.is_action_pressed("ui_accept") and selected_answer_area != null: # "ui_accept" is usually Spacebar/Enter
+	if Input.is_action_just_pressed("select_answer") and selected_answer_area != null: # "ui_accept" is usually Spacebar/Enter
 		var selected_answer = selected_answer_area.get_node("Label").text
 		_check_answer(selected_answer)
 		
@@ -78,7 +78,7 @@ func _check_answer(selected_answer):
 	selected_answer_area = null 
 	await get_tree().create_timer(2.5).timeout
 	Global.can_move = true  
-	$"../scholar".position = Vector2(-150,15)
+	$"..".position = Vector2(-150,15)
 	
 	current_question_index += 1
 	_load_question()
@@ -95,7 +95,6 @@ func _on_answer_a_body_exited(body: Node2D) -> void:
 
 func _on_answer_b_body_entered(body: Node2D) -> void:
 	_set_selected_answer($answers/answerB)
-	
 
 func _on_answer_b_body_exited(body: Node2D) -> void:
 	_unset_selected_answer($answers/answerB)
@@ -103,7 +102,6 @@ func _on_answer_b_body_exited(body: Node2D) -> void:
 
 func _on_answer_c_body_entered(body: Node2D) -> void:
 	_set_selected_answer($answers/answerC)
-
 
 func _on_answer_c_body_exited(body: Node2D) -> void:
 	_unset_selected_answer($answers/answerC)

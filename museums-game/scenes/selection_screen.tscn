@@ -1,0 +1,145 @@
+[gd_scene load_steps=8 format=3 uid="uid://ht8s3arlfwyw"]
+
+[ext_resource type="Texture2D" uid="uid://d0kmaljk0k002" path="res://art/tilesets/museum_background.jpg" id="1_mw17e"]
+[ext_resource type="Script" path="res://scripts/selection_screen.gd" id="1_sgy8x"]
+[ext_resource type="Texture2D" uid="uid://duagirdq5wrkb" path="res://art/character_profiles/scholar_profile.png" id="2_lpdsy"]
+[ext_resource type="Texture2D" uid="uid://cis5pv14jr32u" path="res://art/character_profiles/kid_profile.png" id="3_v40df"]
+
+[sub_resource type="FontFile" id="FontFile_a05p0"]
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_7eefi"]
+
+[sub_resource type="Theme" id="Theme_a4e3m"]
+
+[node name="SelectionScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sgy8x")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -40.0
+offset_top = -56.0
+offset_right = 1400.0
+offset_bottom = 844.0
+texture = ExtResource("1_mw17e")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect"]
+layout_mode = 2
+offset_left = 492.0
+offset_top = 391.0
+offset_right = 765.0
+offset_bottom = 630.0
+
+[node name="Scholar" type="Panel" parent="TextureRect/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/HBoxContainer/Scholar"]
+layout_mode = 0
+offset_left = -68.0
+offset_top = -20.0
+offset_right = 171.0
+offset_bottom = 213.0
+texture = ExtResource("2_lpdsy")
+
+[node name="scholar_label" type="Label" parent="TextureRect/HBoxContainer/Scholar"]
+z_index = 2
+offset_left = -25.0
+offset_top = 177.0
+offset_right = 152.0
+offset_bottom = 225.0
+theme_override_colors/font_color = Color(0.943874, 0.954134, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.0313726, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = SubResource("FontFile_a05p0")
+theme_override_font_sizes/font_size = 30
+text = "Scholar"
+uppercase = true
+
+[node name="Kid" type="Panel" parent="TextureRect/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/HBoxContainer/Kid"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.098
+anchor_bottom = -0.098
+offset_left = 240.0
+offset_top = 3.422
+offset_right = 459.0
+offset_bottom = 235.422
+theme = SubResource("Theme_7eefi")
+texture = ExtResource("3_v40df")
+
+[node name="kid_label" type="Label" parent="TextureRect/HBoxContainer/Kid"]
+z_index = 2
+offset_left = 305.0
+offset_top = 180.0
+offset_right = 436.0
+offset_bottom = 214.0
+theme_override_colors/font_color = Color(0.943874, 0.954134, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.0313726, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = SubResource("FontFile_a05p0")
+theme_override_font_sizes/font_size = 30
+text = "Child"
+uppercase = true
+
+[node name="rolelabel" type="Label" parent="TextureRect"]
+z_index = 2
+layout_mode = 2
+offset_left = 527.0
+offset_top = 302.0
+offset_right = 842.0
+offset_bottom = 366.0
+theme_override_colors/font_color = Color(0.943874, 0.954134, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.0313726, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = SubResource("FontFile_a05p0")
+theme_override_font_sizes/font_size = 30
+text = "Choose your role"
+uppercase = true
+
+[node name="start" type="Button" parent="."]
+layout_mode = 2
+offset_left = 540.0
+offset_top = 612.0
+offset_right = 790.0
+offset_bottom = 677.0
+theme = SubResource("Theme_a4e3m")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "START"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(658, 427)
+zoom = Vector2(3, 3)
+
+[connection signal="mouse_entered" from="TextureRect/HBoxContainer/Scholar" to="." method="_on_scholar_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/HBoxContainer/Scholar" to="." method="_on_scholar_mouse_exited"]
+[connection signal="mouse_entered" from="TextureRect/HBoxContainer/Kid" to="." method="_on_kid_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/HBoxContainer/Kid" to="." method="_on_kid_mouse_exited"]
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
