@@ -1,0 +1,94 @@
+[gd_scene load_steps=13 format=3 uid="uid://cqe517sciclk"]
+
+[ext_resource type="Script" path="res://scripts/phone_person.gd" id="1_5k0l5"]
+[ext_resource type="Texture2D" uid="uid://cr7qwh64d40q2" path="res://art/characters/phone_person.png" id="1_uw01h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22ihw"]
+atlas = ExtResource("1_uw01h")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhflk"]
+atlas = ExtResource("1_uw01h")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onmje"]
+atlas = ExtResource("1_uw01h")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgiof"]
+atlas = ExtResource("1_uw01h")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3flfl"]
+atlas = ExtResource("1_uw01h")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00scx"]
+atlas = ExtResource("1_uw01h")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5e2b"]
+atlas = ExtResource("1_uw01h")
+region = Rect2(288, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60vuq"]
+atlas = ExtResource("1_uw01h")
+region = Rect2(336, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1vwpt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22ihw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhflk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onmje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgiof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3flfl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00scx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5e2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60vuq")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7vwc1"]
+radius = 7.0
+height = 18.0
+
+[node name="phone_person" type="CharacterBody2D"]
+script = ExtResource("1_5k0l5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1vwpt")
+animation = &"walk"
+autoplay = "walk"
+frame = 7
+frame_progress = 0.295075
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_7vwc1")
+
+[node name="up_timer" type="Timer" parent="."]
+wait_time = 2.5
+
+[node name="down_timer" type="Timer" parent="."]
+wait_time = 2.5
+
+[connection signal="timeout" from="up_timer" to="." method="_on_up_timer_timeout"]
+[connection signal="timeout" from="down_timer" to="." method="_on_down_timer_timeout"]

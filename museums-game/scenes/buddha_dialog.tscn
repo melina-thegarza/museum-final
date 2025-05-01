@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyh53a3ab3x1f"]
+
+[ext_resource type="Texture2D" uid="uid://d2st5yy7bpuo2" path="res://art/character_profiles/pngtree-pixel-speech-bubble-png-image_6129517.png" id="1_3244r"]
+[ext_resource type="Script" path="res://scripts/buddha_dialog.gd" id="1_nil1g"]
+
+[node name="buddha_dialog" type="Node2D"]
+script = ExtResource("1_nil1g")
+
+[node name="cloud" type="TextureRect" parent="."]
+offset_left = -18.0
+offset_top = -22.0
+offset_right = 113.0
+offset_bottom = 87.0
+texture = ExtResource("1_3244r")
+
+[node name="cloud_text" type="RichTextLabel" parent="cloud"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 26.0
+offset_right = 112.0
+offset_bottom = 74.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 9

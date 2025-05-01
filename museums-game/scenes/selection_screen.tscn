@@ -113,9 +113,9 @@ uppercase = true
 [node name="rolelabel" type="Label" parent="TextureRect"]
 z_index = 2
 layout_mode = 2
-offset_left = 527.0
+offset_left = 479.0
 offset_top = 302.0
-offset_right = 842.0
+offset_right = 895.0
 offset_bottom = 366.0
 theme_override_colors/font_color = Color(0.943874, 0.954134, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -125,7 +125,7 @@ theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = SubResource("FontFile_a05p0")
 theme_override_font_sizes/font_size = 30
-text = "Choose your role"
+text = "Choose your ADVENTURE"
 uppercase = true
 
 [node name="start" type="Button" parent="."]

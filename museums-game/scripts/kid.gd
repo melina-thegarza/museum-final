@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-var run_speed = 25
+var run_speed = 35
 var player = null
 
 func _ready():

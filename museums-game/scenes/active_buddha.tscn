@@ -1,17 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://csmxs5o785lh8"]
+[gd_scene load_steps=8 format=3 uid="uid://csmxs5o785lh8"]
 
 [ext_resource type="Script" path="res://scripts/active_buddha.gd" id="1_6r6xe"]
 [ext_resource type="Texture2D" uid="uid://b7cr2rfpe1ehm" path="res://art/objects/buddha.png" id="2_gxnnb"]
+[ext_resource type="PackedScene" uid="uid://cyh53a3ab3x1f" path="res://scenes/buddha_dialog.tscn" id="3_lv3f2"]
+[ext_resource type="Texture2D" uid="uid://cxinhwd3uwt5n" path="res://art/character_profiles/light.jpg" id="4_prbj5"]
+[ext_resource type="PackedScene" uid="uid://c6myhfv00oacx" path="res://scenes/minigame_timer.tscn" id="5_g22j4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k12e1"]
-radius = 16.0
-height = 62.0
+radius = 12.0
+height = 48.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o3b8m"]
 radius = 26.0
 height = 94.0
 
 [node name="active-buddha" type="CharacterBody2D"]
+collision_mask = 5
 script = ExtResource("1_6r6xe")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -46,4 +50,19 @@ theme_override_colors/font_outline_color = Color(0.82606, 0.82606, 0.82606, 1)
 theme_override_font_sizes/font_size = 10
 show_percentage = false
 
+[node name="buddha_dialog" parent="." instance=ExtResource("3_lv3f2")]
+position = Vector2(2, -100)
+
+[node name="display_dialog" type="Timer" parent="."]
+wait_time = 2.5
+
+[node name="light" type="PointLight2D" parent="."]
+energy = 1.4
+blend_mode = 2
+texture = ExtResource("4_prbj5")
+
+[node name="minigame_timer" parent="." instance=ExtResource("5_g22j4")]
+position = Vector2(-21, 53)
+
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="timeout" from="display_dialog" to="." method="_on_display_dialog_timeout"]
