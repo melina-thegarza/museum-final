@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://csmxs5o785lh8"]
+[gd_scene load_steps=10 format=3 uid="uid://csmxs5o785lh8"]
 
 [ext_resource type="Script" path="res://scripts/active_buddha.gd" id="1_6r6xe"]
 [ext_resource type="Texture2D" uid="uid://b7cr2rfpe1ehm" path="res://art/objects/buddha.png" id="2_gxnnb"]
 [ext_resource type="PackedScene" uid="uid://cyh53a3ab3x1f" path="res://scenes/buddha_dialog.tscn" id="3_lv3f2"]
 [ext_resource type="Texture2D" uid="uid://cxinhwd3uwt5n" path="res://art/character_profiles/light.jpg" id="4_prbj5"]
 [ext_resource type="PackedScene" uid="uid://c6myhfv00oacx" path="res://scenes/minigame_timer.tscn" id="5_g22j4"]
+[ext_resource type="PackedScene" uid="uid://d14ci1jvwhdna" path="res://scenes/stone_label.tscn" id="6_ic105"]
+[ext_resource type="Script" path="res://scripts/stone_label.gd" id="7_tqtbe"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k12e1"]
 radius = 12.0
@@ -57,12 +59,19 @@ position = Vector2(2, -100)
 wait_time = 2.5
 
 [node name="light" type="PointLight2D" parent="."]
-energy = 1.4
+energy = 1.6
 blend_mode = 2
 texture = ExtResource("4_prbj5")
 
 [node name="minigame_timer" parent="." instance=ExtResource("5_g22j4")]
 position = Vector2(-21, 53)
 
+[node name="light_timer" type="Timer" parent="."]
+
+[node name="stone_label" parent="." instance=ExtResource("6_ic105")]
+position = Vector2(-20, 75)
+script = ExtResource("7_tqtbe")
+
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="timeout" from="display_dialog" to="." method="_on_display_dialog_timeout"]
+[connection signal="timeout" from="light_timer" to="." method="_on_light_timer_timeout"]

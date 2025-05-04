@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	print("end of game")
-	print("we won")
+	print("ran out of time, lost")
 	#switch scenes
 	Global.end_of_kid_minigame = true
-	Global._won_buddha_minigame()
+	Global._loss_buddha_minigame()

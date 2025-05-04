@@ -48,14 +48,18 @@ func _on_detection_area_body_entered(body: Node2D) -> void:
 		self.modulate = Color(0.8,0.8,0.8,0.8)
 		$display_dialog.start()
 		dialog_bubble.cloud_text.text = "Stop texting, be respectful!"
+	elif body.has_method("_is_stone"):
+		light.enabled = true
+		$light_timer.start()
 	
 	if life <=0:
 		_lost_minigame()
-
+func _active_buddha():
+	pass
 
 func _on_display_dialog_timeout() -> void:
 	dialog_bubble.visible = false
-	light.enabled = false
+	#light.enabled = false
 	self.modulate = Color(1,1,1,1)
 	
 func _lost_minigame():
@@ -69,3 +73,7 @@ func _reset_life() -> void:
 	of the minigame or whenever you want to reset the player's health.
 	"""
 	life = INITIAL_LIFE
+
+
+func _on_light_timer_timeout() -> void:
+	light.enabled = false

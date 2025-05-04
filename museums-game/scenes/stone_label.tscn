@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d14ci1jvwhdna"]
+
+[node name="stone_label" type="Node2D"]
+
+[node name="score_label" type="RichTextLabel" parent="."]
+offset_top = -5.0
+offset_right = 40.0
+offset_bottom = 23.0
+bbcode_enabled = true
+text = "[img]res://art/items/mini_stone.png[/img] 0
+"
+fit_content = true
+scroll_active = false

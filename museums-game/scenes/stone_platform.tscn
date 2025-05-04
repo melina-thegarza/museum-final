@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4udyl5bk0qxx"]
+
+[ext_resource type="Texture2D" uid="uid://bf4j08gc46leo" path="res://art/items/statue_platform.png" id="1_0c4vc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nx7ay"]
+size = Vector2(72, 19.25)
+
+[node name="stone_platform" type="CharacterBody2D"]
+z_index = -1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7.62939e-06, 1)
+scale = Vector2(0.298658, 0.236842)
+texture = ExtResource("1_0c4vc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -1
+position = Vector2(-1, -0.625)
+shape = SubResource("RectangleShape2D_nx7ay")

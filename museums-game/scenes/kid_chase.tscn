@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://c083ikxt83b7r"]
+[gd_scene load_steps=7 format=3 uid="uid://c083ikxt83b7r"]
 
 [ext_resource type="TileSet" uid="uid://ql3ldccgowc4" path="res://scenes/world.tres" id="1_gvc2b"]
 [ext_resource type="PackedScene" uid="uid://cw4y0v758bprg" path="res://scenes/kid.tscn" id="2_4m1db"]
 [ext_resource type="PackedScene" uid="uid://csmxs5o785lh8" path="res://scenes/active_buddha.tscn" id="3_vvvbv"]
 [ext_resource type="PackedScene" uid="uid://cqe517sciclk" path="res://scenes/phone_person.tscn" id="4_6mbj5"]
+[ext_resource type="PackedScene" uid="uid://bmthgxouiqhop" path="res://scenes/stone.tscn" id="5_0cckv"]
+[ext_resource type="Script" path="res://scripts/stones.gd" id="5_mle2x"]
 
 [node name="kid_chase" type="Node2D"]
 
@@ -37,3 +39,15 @@ position = Vector2(2, 64)
 
 [node name="phone_person3" parent="disrespectful_visitors" instance=ExtResource("4_6mbj5")]
 position = Vector2(104, 23)
+
+[node name="stones" type="Node" parent="."]
+script = ExtResource("5_mle2x")
+
+[node name="stone" parent="stones" instance=ExtResource("5_0cckv")]
+position = Vector2(-71, 77)
+
+[node name="stone2" parent="stones" instance=ExtResource("5_0cckv")]
+position = Vector2(101, 77)
+
+[node name="stone3" parent="stones" instance=ExtResource("5_0cckv")]
+position = Vector2(-33, 132)

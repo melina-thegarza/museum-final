@@ -1,25 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://cw256fxpfjfgc"]
+[gd_scene load_steps=6 format=3 uid="uid://cw256fxpfjfgc"]
 
 [ext_resource type="Script" path="res://scripts/won_kid_minigame.gd" id="1_j64ch"]
 [ext_resource type="Texture2D" uid="uid://buwj15pex17x0" path="res://art/character_profiles/exit_button.png" id="2_hv1w7"]
+[ext_resource type="PackedScene" uid="uid://bmn06v7y1p74k" path="res://scenes/winner_buddha.tscn" id="3_w0m5b"]
+[ext_resource type="PackedScene" uid="uid://b4udyl5bk0qxx" path="res://scenes/stone_platform.tscn" id="4_eltcu"]
+[ext_resource type="PackedScene" uid="uid://dfvlmvms305gm" path="res://scenes/winner_kid.tscn" id="5_r55d4"]
 
 [node name="won_kid_minigame" type="Node2D"]
+position = Vector2(-2, -34)
 script = ExtResource("1_j64ch")
 
 [node name="won_label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "you won"
+offset_left = -3.0
+offset_top = -24.0
+offset_right = 68.0
+offset_bottom = -1.0
+text = "you won!"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(35, 28)
 zoom = Vector2(7, 7)
 
 [node name="back_button" type="TextureButton" parent="."]
-offset_left = 1.0
-offset_top = 33.0
-offset_right = 61.0
-offset_bottom = 73.0
+offset_top = 120.0
+offset_right = 60.0
+offset_bottom = 145.0
 texture_normal = ExtResource("2_hv1w7")
+metadata/_edit_use_anchors_ = true
+
+[node name="winner_buddha" parent="." instance=ExtResource("3_w0m5b")]
+z_index = 1
+position = Vector2(29, 36)
+
+[node name="stone_platform" parent="." instance=ExtResource("4_eltcu")]
+position = Vector2(29, 86)
+
+[node name="winner_kid" parent="." instance=ExtResource("5_r55d4")]
+position = Vector2(-3, 99)
 
 [connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
