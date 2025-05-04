@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://ht8s3arlfwyw"]
+[gd_scene load_steps=10 format=3 uid="uid://ht8s3arlfwyw"]
 
 [ext_resource type="Texture2D" uid="uid://d0kmaljk0k002" path="res://art/tilesets/museum_background.jpg" id="1_mw17e"]
 [ext_resource type="Script" path="res://scripts/selection_screen.gd" id="1_sgy8x"]
 [ext_resource type="Texture2D" uid="uid://duagirdq5wrkb" path="res://art/character_profiles/scholar_profile.png" id="2_lpdsy"]
 [ext_resource type="Texture2D" uid="uid://cis5pv14jr32u" path="res://art/character_profiles/kid_profile.png" id="3_v40df"]
+[ext_resource type="Texture2D" uid="uid://gno70deprj8y" path="res://art/buttons/start_button.png" id="5_khjer"]
+[ext_resource type="Texture2D" uid="uid://dlyg1d18nmkmb" path="res://art/buttons/exit_button.png" id="6_6tou6"]
 
 [sub_resource type="FontFile" id="FontFile_a05p0"]
 subpixel_positioning = 0
@@ -118,7 +120,7 @@ offset_top = 302.0
 offset_right = 895.0
 offset_bottom = 366.0
 theme_override_colors/font_color = Color(0.943874, 0.954134, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.654902, 0, 1)
 theme_override_colors/font_outline_color = Color(0.0313726, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/outline_size = 3
@@ -128,23 +130,34 @@ theme_override_font_sizes/font_size = 30
 text = "Choose your ADVENTURE"
 uppercase = true
 
-[node name="start" type="Button" parent="."]
+[node name="start" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 540.0
-offset_top = 612.0
-offset_right = 790.0
-offset_bottom = 677.0
+offset_left = 663.0
+offset_top = 588.0
+offset_right = 788.0
+offset_bottom = 647.0
 theme = SubResource("Theme_a4e3m")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 30
-text = "START"
+texture_normal = ExtResource("5_khjer")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(658, 427)
 zoom = Vector2(3, 3)
 
+[node name="exit" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 588.0
+offset_right = 650.0
+offset_bottom = 646.0
+texture_normal = ExtResource("6_6tou6")
+
 [connection signal="mouse_entered" from="TextureRect/HBoxContainer/Scholar" to="." method="_on_scholar_mouse_entered"]
 [connection signal="mouse_exited" from="TextureRect/HBoxContainer/Scholar" to="." method="_on_scholar_mouse_exited"]
 [connection signal="mouse_entered" from="TextureRect/HBoxContainer/Kid" to="." method="_on_kid_mouse_entered"]
 [connection signal="mouse_exited" from="TextureRect/HBoxContainer/Kid" to="." method="_on_kid_mouse_exited"]
+[connection signal="mouse_entered" from="start" to="." method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="start" to="." method="_on_start_mouse_exited"]
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="mouse_entered" from="exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="mouse_exited" from="exit" to="." method="_on_exit_mouse_exited"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
