@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1uvqubadhbxo"]
+[gd_scene load_steps=5 format=3 uid="uid://c1uvqubadhbxo"]
 
 [ext_resource type="Texture2D" uid="uid://0silrvkcldt" path="res://art/objects/real_mask.png" id="1_na3t8"]
 [ext_resource type="Script" path="res://scripts/mask.gd" id="1_niip4"]
@@ -8,8 +8,6 @@ radius = 40.0125
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ymn7s"]
 radius = 16.0
-
-[sub_resource type="Theme" id="Theme_s13mp"]
 
 [node name="mask" type="CharacterBody2D"]
 script = ExtResource("1_niip4")
@@ -29,15 +27,5 @@ shape = SubResource("CircleShape2D_ji68v")
 position = Vector2(-2, 18)
 shape = SubResource("CircleShape2D_ymn7s")
 
-[node name="mask_button" type="Button" parent="."]
-offset_left = -103.0
-offset_top = 22.0
-offset_right = 108.0
-offset_bottom = 53.0
-theme = SubResource("Theme_s13mp")
-theme_override_font_sizes/font_size = 8
-text = "Click to play as: Queen Mother Pendant Mask: Iyoba "
-
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
-[connection signal="pressed" from="mask_button" to="." method="_on_mask_button_pressed"]

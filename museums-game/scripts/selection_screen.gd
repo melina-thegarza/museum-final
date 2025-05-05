@@ -3,12 +3,17 @@ extends Control
 @onready var kid = $TextureRect/HBoxContainer/Kid
 @onready var start = $start
 @onready var exit = $exit
+@onready var warning = $warning
 var is_mouse_over = false
 var selected = null
 var selected_char = null
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	warning.visible = false
+	start.modulate = Color(0.8,0.8,0.8,0.8)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -51,7 +56,11 @@ func _on_kid_mouse_exited() -> void:
 
 
 func _on_start_pressed() -> void:
-	Global._transition_to_buddha_minigame(selected_char.name)
+	if selected_char == null:
+		#cannot move forward, need to select character
+		warning.visible = true
+	else:
+		Global._transition_to_buddha_minigame(selected_char.name)
 
 
 func _on_start_mouse_entered() -> void:

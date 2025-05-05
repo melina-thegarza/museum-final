@@ -5,11 +5,7 @@ var player = null
 
 
 func _physics_process(delta: float) -> void:
-	var mask_button = $mask_button
-	if display:
-		mask_button.visible = true
-	else:
-		mask_button.visible = false
+	pass
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
 	player = body

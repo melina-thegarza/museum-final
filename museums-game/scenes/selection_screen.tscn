@@ -120,7 +120,7 @@ offset_top = 302.0
 offset_right = 895.0
 offset_bottom = 366.0
 theme_override_colors/font_color = Color(0.943874, 0.954134, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.654902, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.0313726, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/outline_size = 3
@@ -150,6 +150,22 @@ offset_top = 588.0
 offset_right = 650.0
 offset_bottom = 646.0
 texture_normal = ExtResource("6_6tou6")
+
+[node name="warning" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 282.0
+offset_right = 914.0
+offset_bottom = 322.0
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_font_sizes/normal_font_size = 21
+text = "WARNING: You need to select a character to start!"
+fit_content = true
+scroll_active = false
 
 [connection signal="mouse_entered" from="TextureRect/HBoxContainer/Scholar" to="." method="_on_scholar_mouse_entered"]
 [connection signal="mouse_exited" from="TextureRect/HBoxContainer/Scholar" to="." method="_on_scholar_mouse_exited"]
