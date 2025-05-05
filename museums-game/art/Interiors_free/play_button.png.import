@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drqfirck3pymd"
-path="res://.godot/imported/Room_Builder_free_16x16.png-c99a7554342d8c8afd9c9ed61004ffdb.ctex"
+uid="uid://dqilaydwng51q"
+path="res://.godot/imported/play_button.png-b67683c23f6c919ac57288ee6c3d24d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Interiors_free/16x16/Room_Builder_free_16x16.png"
-dest_files=["res://.godot/imported/Room_Builder_free_16x16.png-c99a7554342d8c8afd9c9ed61004ffdb.ctex"]
+source_file="res://art/Interiors_free/play_button.png"
+dest_files=["res://.godot/imported/play_button.png-b67683c23f6c919ac57288ee6c3d24d5.ctex"]
 
 [params]
 
