@@ -80,3 +80,12 @@ func _return_to_main_screen():
 	tree.get_root().add_child(next_scene)
 	tree.get_root().remove_child(cur_scene)
 	tree.set_current_scene(next_scene)
+
+func _go_to_instructions_screen():
+	var tree = get_tree()
+	var cur_scene = tree.get_current_scene()
+	var next_scene = preload("res://scenes/instructions_screen.tscn").instantiate()
+	
+	tree.get_root().add_child(next_scene)
+	tree.get_root().remove_child(cur_scene)
+	tree.set_current_scene(next_scene)
