@@ -1,21 +1,26 @@
-[gd_scene load_steps=6 format=3 uid="uid://d70rdyi3d6pp"]
+[gd_scene load_steps=7 format=3 uid="uid://d70rdyi3d6pp"]
 
 [ext_resource type="Texture2D" uid="uid://b7cr2rfpe1ehm" path="res://art/objects/buddha.png" id="1_feu7g"]
 [ext_resource type="Script" path="res://scripts/buddha.gd" id="1_ksspf"]
+[ext_resource type="PackedScene" uid="uid://b4udyl5bk0qxx" path="res://scenes/stone_platform.tscn" id="3_u54fj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v06ok"]
-radius = 58.0
+radius = 67.7422
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5qnj7"]
-radius = 15.0
-height = 72.0
+radius = 18.0
+height = 36.0
 
 [sub_resource type="Theme" id="Theme_4gj44"]
 
 [node name="buddha" type="CharacterBody2D"]
+z_index = 2
+position = Vector2(-1, -24)
 script = ExtResource("1_ksspf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, -9)
+scale = Vector2(1.15333, 1.18)
 texture = ExtResource("1_feu7g")
 
 [node name="detection_area" type="Area2D" parent="."]
@@ -23,21 +28,24 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
-position = Vector2(4, 14)
+position = Vector2(0, 10)
 shape = SubResource("CircleShape2D_v06ok")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 21)
+position = Vector2(0, 29)
 shape = SubResource("CapsuleShape2D_5qnj7")
 
 [node name="buddha_button" type="Button" parent="."]
-offset_left = -75.0
-offset_top = 51.0
-offset_right = 85.0
-offset_bottom = 71.0
+offset_left = 26.0
+offset_top = -15.0
+offset_right = 186.0
+offset_bottom = 16.0
 theme = SubResource("Theme_4gj44")
 theme_override_font_sizes/font_size = 8
 text = "Click to play as: Buddha Maitreya (Mile)"
+
+[node name="stone_platform" parent="." instance=ExtResource("3_u54fj")]
+position = Vector2(-1, 50)
 
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]

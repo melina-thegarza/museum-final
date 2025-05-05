@@ -1,31 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1uvqubadhbxo"]
+[gd_scene load_steps=4 format=3 uid="uid://c1uvqubadhbxo"]
 
-[ext_resource type="Texture2D" uid="uid://0silrvkcldt" path="res://art/objects/real_mask.png" id="1_na3t8"]
 [ext_resource type="Script" path="res://scripts/mask.gd" id="1_niip4"]
+[ext_resource type="Texture2D" uid="uid://bpvhjbqbrcj63" path="res://art/items/mask_in_glass.png" id="2_0htxq"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ji68v"]
-radius = 40.0125
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_ymn7s"]
-radius = 16.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nqutw"]
+radius = 20.0
+height = 60.0
 
 [node name="mask" type="CharacterBody2D"]
+position = Vector2(5, -54)
 script = ExtResource("1_niip4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_na3t8")
-
-[node name="detection_area" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
-position = Vector2(-4, 4)
-shape = SubResource("CircleShape2D_ji68v")
+position = Vector2(-4.76837e-07, -1)
+scale = Vector2(0.732394, 0.574586)
+texture = ExtResource("2_0htxq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 18)
-shape = SubResource("CircleShape2D_ymn7s")
-
-[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
-[connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
+position = Vector2(0, 23)
+shape = SubResource("CapsuleShape2D_nqutw")
