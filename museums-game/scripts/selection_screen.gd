@@ -60,7 +60,7 @@ func _on_start_pressed() -> void:
 		#cannot move forward, need to select character
 		warning.visible = true
 	else:
-		Global._transition_to_buddha_minigame(selected_char.name)
+		Global._transition_to_buddha_minigame_instructions(selected_char.name)
 
 
 func _on_start_mouse_entered() -> void:

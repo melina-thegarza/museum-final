@@ -1,0 +1,209 @@
+[gd_scene load_steps=9 format=3 uid="uid://c101fgia1xeb7"]
+
+[ext_resource type="Script" path="res://scripts/kid_chase_instructions.gd" id="1_jvod7"]
+[ext_resource type="Texture2D" uid="uid://dqilaydwng51q" path="res://art/Interiors_free/play_button.png" id="3_q2r5m"]
+[ext_resource type="Script" path="res://scripts/slot.gd" id="4_3un5n"]
+[ext_resource type="Texture2D" uid="uid://cxinhwd3uwt5n" path="res://art/character_profiles/light.jpg" id="4_ybud1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fjc6a"]
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xernc"]
+shadow_color = Color(0, 0, 0, 0.721569)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmw0j"]
+shadow_color = Color(0, 0, 0, 0.67451)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aeyj7"]
+shadow_color = Color(0, 0, 0, 0.8)
+shadow_size = 5
+
+[node name="kid_chase_instructions" type="Node2D"]
+position = Vector2(-26, 4)
+script = ExtResource("1_jvod7")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.629675, 0.629675, 0.629675, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -156.0
+offset_top = -238.0
+offset_right = 591.0
+offset_bottom = 351.0
+color = Color(0.96519, 0.93535, 0.831339, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(208, 64)
+zoom = Vector2(4, 4)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 35.0
+offset_top = -68.0
+offset_right = 452.0
+offset_bottom = -8.0
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/normal_font_size = 26
+text = "HOW TO PLAY/INSPIRATION"
+scroll_active = false
+
+[node name="play_btn" type="TextureButton" parent="."]
+offset_left = 175.0
+offset_top = 173.0
+offset_right = 253.0
+offset_bottom = 213.0
+texture_normal = ExtResource("3_q2r5m")
+
+[node name="ActionBar" type="HBoxContainer" parent="."]
+offset_left = -106.0
+offset_right = 146.0
+offset_bottom = 75.0
+size_flags_vertical = 4
+theme_override_constants/separation = 13
+alignment = 1
+
+[node name="goal_slot" type="PanelContainer" parent="ActionBar"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+script = ExtResource("4_3un5n")
+
+[node name="TextureRect" type="TextureRect" parent="ActionBar/goal_slot"]
+layout_mode = 2
+expand_mode = 2
+
+[node name="Panel" type="Panel" parent="ActionBar/goal_slot"]
+show_behind_parent = true
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_fjc6a")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ActionBar/goal_slot"]
+layout_mode = 2
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/normal_font_size = 13
+theme_override_font_sizes/bold_font_size = 14
+bbcode_enabled = true
+text = "GOAL: Collect all the stones before time runs out to build a protective stand for the Buddha against visitors.
+
+[b]MOVE: Use the keys[/b]"
+scroll_active = false
+
+[node name="PointLight2D" type="PointLight2D" parent="ActionBar/goal_slot"]
+position = Vector2(322, 60)
+scale = Vector2(0.99572, 0.855556)
+energy = 0.8
+texture = ExtResource("4_ybud1")
+
+[node name="reading_quote_slot" type="PanelContainer" parent="ActionBar"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+script = ExtResource("4_3un5n")
+
+[node name="TextureRect" type="TextureRect" parent="ActionBar/reading_quote_slot"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ActionBar/reading_quote_slot"]
+show_behind_parent = true
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_xernc")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ActionBar/reading_quote_slot"]
+layout_mode = 2
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/normal_font_size = 13
+theme_override_font_sizes/bold_font_size = 13
+bbcode_enabled = true
+text = "[b]INSPIRED BY: Steph Berns [/b], “Considering the Glass Case: Material encounters between museums, visitors and religious objects.”
+"
+scroll_active = false
+
+[node name="quote_slot" type="PanelContainer" parent="ActionBar"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+script = ExtResource("4_3un5n")
+
+[node name="TextureRect" type="TextureRect" parent="ActionBar/quote_slot"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ActionBar/quote_slot"]
+show_behind_parent = true
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_kmw0j")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ActionBar/quote_slot"]
+layout_mode = 2
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/bold_font_size = 12
+bbcode_enabled = true
+text = "QUOTE: \"...cases can facilitate many encounters that aid visitors’ abilities to [b]connect devotionally [/b]with exhibits.\" - offers a counterpoint to the idea of barriers solely hindering, suggesting they can enable a certain kind of interaction focused on reverence."
+scroll_active = false
+
+[node name="analysis slot" type="PanelContainer" parent="ActionBar"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+script = ExtResource("4_3un5n")
+
+[node name="TextureRect" type="TextureRect" parent="ActionBar/analysis slot"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ActionBar/analysis slot"]
+show_behind_parent = true
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_aeyj7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ActionBar/analysis slot"]
+layout_mode = 2
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/bold_font_size = 12
+bbcode_enabled = true
+text = "ANALYSIS:  [b]Barriers protect object sacrality[/b] by preventing visitor violation of unprotected sacred spaces. This minigame demonstrates that humans tend to violate unprotected museum objects, thus proving barriers preserve sacredness."
+scroll_active = false
+
+[connection signal="mouse_entered" from="play_btn" to="." method="_on_play_btn_mouse_entered"]
+[connection signal="mouse_exited" from="play_btn" to="." method="_on_play_btn_mouse_exited"]
+[connection signal="pressed" from="play_btn" to="." method="_on_play_btn_pressed"]
+[connection signal="mouse_entered" from="ActionBar/goal_slot" to="ActionBar/goal_slot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ActionBar/goal_slot" to="ActionBar/goal_slot" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="ActionBar/reading_quote_slot" to="ActionBar/reading_quote_slot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ActionBar/reading_quote_slot" to="ActionBar/reading_quote_slot" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="ActionBar/quote_slot" to="ActionBar/quote_slot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ActionBar/quote_slot" to="ActionBar/quote_slot" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="ActionBar/analysis slot" to="ActionBar/analysis slot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ActionBar/analysis slot" to="ActionBar/analysis slot" method="_on_mouse_exited"]

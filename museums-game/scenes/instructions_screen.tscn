@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cxinhwd3uwt5n" path="res://art/character_profiles/light.jpg" id="2_a3n66"]
 [ext_resource type="Texture2D" uid="uid://dqilaydwng51q" path="res://art/Interiors_free/play_button.png" id="3_66c6x"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwfdc"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4x77a"]
 texture = ExtResource("1_1sge8")
 16:0/0 = 0
 17:0/0 = 0
@@ -2070,7 +2070,7 @@ texture = ExtResource("1_1sge8")
 29:62/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_lp1oc"]
-sources/1 = SubResource("TileSetAtlasSource_vwfdc")
+sources/1 = SubResource("TileSetAtlasSource_4x77a")
 
 [node name="instructions_screen" type="Node2D"]
 script = ExtResource("1_61gbe")
