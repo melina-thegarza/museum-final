@@ -5,11 +5,11 @@ var player = null
 
 
 func _physics_process(delta: float) -> void:
-	var buddha_button = $buddha_button
+	
 	if display:
-		buddha_button.visible = true
+		$portal.visible = true
 	else:
-		buddha_button.visible = false
+		$portal.visible = false
 
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
@@ -23,3 +23,8 @@ func _on_detection_area_body_exited(body: Node2D) -> void:
 
 func _on_buddha_button_pressed() -> void:
 	Global._add_a_scene_manually(buddha)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if display == true:
+		Global._add_a_scene_manually(buddha)

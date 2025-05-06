@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c2nlu1p1isvba" path="res://art/items/vase.png" id="6_sa460"]
 [ext_resource type="Texture2D" uid="uid://b7p0rg4dilulr" path="res://art/items/vase_mini.png" id="7_5dvgs"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xyiv3"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jddq8"]
 texture = ExtResource("3_lc0gb")
 3:2/0 = 0
 4:2/0 = 0
@@ -7653,11 +7653,11 @@ texture = ExtResource("3_lc0gb")
 46:265/0 = 0
 47:265/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bcb1r"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1b254"]
 texture = ExtResource("4_23lhf")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_24aso"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u0h7x"]
 texture = ExtResource("5_6pdkx")
 0:0/0 = 0
 1:0/0 = 0
@@ -7730,9 +7730,9 @@ texture = ExtResource("5_6pdkx")
 
 [sub_resource type="TileSet" id="TileSet_c4an1"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_xyiv3")
-sources/1 = SubResource("TileSetAtlasSource_bcb1r")
-sources/2 = SubResource("TileSetAtlasSource_24aso")
+sources/0 = SubResource("TileSetAtlasSource_jddq8")
+sources/1 = SubResource("TileSetAtlasSource_1b254")
+sources/2 = SubResource("TileSetAtlasSource_u0h7x")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_opekp"]
 size = Vector2(61.8405, 95.425)
@@ -7854,6 +7854,13 @@ energy = 0.4
 texture = ExtResource("6_d4tb4")
 height = 1.0
 
+[node name="outside_light3" type="PointLight2D" parent="lights"]
+position = Vector2(69, 566)
+scale = Vector2(0.186876, 0.115278)
+energy = 0.4
+texture = ExtResource("6_d4tb4")
+height = 1.0
+
 [node name="vases" type="Node" parent="."]
 
 [node name="vase-1" type="CharacterBody2D" parent="vases"]
@@ -7910,3 +7917,19 @@ texture = ExtResource("7_5dvgs")
 z_index = 1
 position = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_r3nke")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -16.0
+offset_top = 682.0
+offset_right = 149.0
+offset_bottom = 728.0
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/normal_font_size = 19
+text = "ENTER MUSEUM !"
+scroll_active = false

@@ -97,14 +97,13 @@ theme_override_constants/shadow_outline_size = 6
 theme_override_font_sizes/normal_font_size = 13
 theme_override_font_sizes/bold_font_size = 14
 bbcode_enabled = true
-text = "GOAL: Collect all the stones before time runs out to build a protective stand for the Buddha against visitors.
-
+text = "GOAL: Collect all the stones before time runs out to build a protective stand for the Buddha against visitors. Avoid touching visitors.
 [b]MOVE: Use the keys[/b]"
 scroll_active = false
 
 [node name="PointLight2D" type="PointLight2D" parent="ActionBar/goal_slot"]
-position = Vector2(322, 60)
-scale = Vector2(0.99572, 0.855556)
+position = Vector2(313.5, 60)
+scale = Vector2(1.25107, 0.855556)
 energy = 0.8
 texture = ExtResource("4_ybud1")
 

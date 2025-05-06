@@ -59,6 +59,8 @@ position = Vector2(2, -100)
 wait_time = 2.5
 
 [node name="light" type="PointLight2D" parent="."]
+position = Vector2(8.00001, 6.00002)
+scale = Vector2(0.533524, 0.444444)
 energy = 1.6
 blend_mode = 2
 texture = ExtResource("4_prbj5")
