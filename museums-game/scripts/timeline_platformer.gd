@@ -11,7 +11,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void: 
-	pass
+	if Input.is_action_pressed("KEY_ENTER") and current_stage>0:
+		Global._go_stage_timeline(current_stage)
+
+
 
 func _on_out_of_bounds_body_entered(body: Node2D) -> void:
 	get_tree().reload_current_scene()

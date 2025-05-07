@@ -98,7 +98,8 @@ theme_override_font_sizes/normal_font_size = 13
 theme_override_font_sizes/bold_font_size = 14
 bbcode_enabled = true
 text = "GOAL: ...
-[b]MOVE: Use the keys[/b]"
+[b]MOVE: Use the keys[/b]
+[b]JUMP: Use the spacebar[/b]"
 scroll_active = false
 
 [node name="PointLight2D" type="PointLight2D" parent="ActionBar/goal_slot"]

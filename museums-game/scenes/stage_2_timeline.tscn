@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dcc1iydobpjnl"]
+
+[node name="stage_2_timeline" type="Node2D"]
+position = Vector2(6, -8)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.629675, 0.629675, 0.629675, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -353.0
+offset_top = -275.0
+offset_right = 394.0
+offset_bottom = 314.0
+color = Color(0.96519, 0.93535, 0.831339, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -60.0
+offset_top = -89.0
+offset_right = 357.0
+offset_bottom = -29.0
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/normal_font_size = 26
+text = "stage 2
+"
+scroll_active = false
