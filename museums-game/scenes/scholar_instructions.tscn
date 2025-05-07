@@ -1,0 +1,208 @@
+[gd_scene load_steps=9 format=3 uid="uid://c0uy50p2t6hj1"]
+
+[ext_resource type="Texture2D" uid="uid://dqilaydwng51q" path="res://art/Interiors_free/play_button.png" id="1_7ln3i"]
+[ext_resource type="Script" path="res://scripts/scholar_instructions.gd" id="1_cqynk"]
+[ext_resource type="Script" path="res://scripts/slot.gd" id="2_flhfb"]
+[ext_resource type="Texture2D" uid="uid://cxinhwd3uwt5n" path="res://art/character_profiles/light.jpg" id="3_jq2ss"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fjc6a"]
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xernc"]
+shadow_color = Color(0, 0, 0, 0.721569)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmw0j"]
+shadow_color = Color(0, 0, 0, 0.67451)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aeyj7"]
+shadow_color = Color(0, 0, 0, 0.8)
+shadow_size = 5
+
+[node name="scholar_instructions" type="Node2D"]
+position = Vector2(-26, 4)
+script = ExtResource("1_cqynk")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.629675, 0.629675, 0.629675, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -156.0
+offset_top = -238.0
+offset_right = 591.0
+offset_bottom = 351.0
+color = Color(0.96519, 0.93535, 0.831339, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(208, 64)
+zoom = Vector2(4, 4)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 35.0
+offset_top = -68.0
+offset_right = 452.0
+offset_bottom = -8.0
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/normal_font_size = 26
+text = "HOW TO PLAY/INSPIRATION"
+scroll_active = false
+
+[node name="play_btn" type="TextureButton" parent="."]
+offset_left = 157.0
+offset_top = 172.0
+offset_right = 235.0
+offset_bottom = 212.0
+texture_normal = ExtResource("1_7ln3i")
+
+[node name="ActionBar" type="HBoxContainer" parent="."]
+offset_left = -106.0
+offset_right = 146.0
+offset_bottom = 75.0
+size_flags_vertical = 4
+theme_override_constants/separation = 13
+alignment = 1
+
+[node name="goal_slot" type="PanelContainer" parent="ActionBar"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+script = ExtResource("2_flhfb")
+
+[node name="TextureRect" type="TextureRect" parent="ActionBar/goal_slot"]
+layout_mode = 2
+expand_mode = 2
+
+[node name="Panel" type="Panel" parent="ActionBar/goal_slot"]
+show_behind_parent = true
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_fjc6a")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ActionBar/goal_slot"]
+layout_mode = 2
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/normal_font_size = 13
+theme_override_font_sizes/bold_font_size = 14
+bbcode_enabled = true
+text = "GOAL: ...
+[b]MOVE: Use the keys[/b]"
+scroll_active = false
+
+[node name="PointLight2D" type="PointLight2D" parent="ActionBar/goal_slot"]
+position = Vector2(313.5, 60)
+scale = Vector2(1.25107, 0.855556)
+energy = 0.8
+texture = ExtResource("3_jq2ss")
+
+[node name="reading_quote_slot" type="PanelContainer" parent="ActionBar"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+script = ExtResource("2_flhfb")
+
+[node name="TextureRect" type="TextureRect" parent="ActionBar/reading_quote_slot"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ActionBar/reading_quote_slot"]
+show_behind_parent = true
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_xernc")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ActionBar/reading_quote_slot"]
+layout_mode = 2
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/normal_font_size = 13
+theme_override_font_sizes/bold_font_size = 13
+bbcode_enabled = true
+text = "[b]INSPIRED BY: ... [/b], 
+"
+scroll_active = false
+
+[node name="quote_slot" type="PanelContainer" parent="ActionBar"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+script = ExtResource("2_flhfb")
+
+[node name="TextureRect" type="TextureRect" parent="ActionBar/quote_slot"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ActionBar/quote_slot"]
+show_behind_parent = true
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_kmw0j")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ActionBar/quote_slot"]
+layout_mode = 2
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/bold_font_size = 12
+bbcode_enabled = true
+text = "QUOTE: "
+scroll_active = false
+
+[node name="analysis slot" type="PanelContainer" parent="ActionBar"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+script = ExtResource("2_flhfb")
+
+[node name="TextureRect" type="TextureRect" parent="ActionBar/analysis slot"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ActionBar/analysis slot"]
+show_behind_parent = true
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_aeyj7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ActionBar/analysis slot"]
+layout_mode = 2
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/bold_font_size = 12
+bbcode_enabled = true
+text = "ANALYSIS:  "
+scroll_active = false
+
+[connection signal="mouse_entered" from="play_btn" to="." method="_on_play_btn_mouse_entered"]
+[connection signal="mouse_exited" from="play_btn" to="." method="_on_play_btn_mouse_exited"]
+[connection signal="pressed" from="play_btn" to="." method="_on_play_btn_pressed"]
+[connection signal="mouse_entered" from="ActionBar/goal_slot" to="ActionBar/goal_slot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ActionBar/goal_slot" to="ActionBar/goal_slot" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="ActionBar/reading_quote_slot" to="ActionBar/reading_quote_slot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ActionBar/reading_quote_slot" to="ActionBar/reading_quote_slot" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="ActionBar/quote_slot" to="ActionBar/quote_slot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ActionBar/quote_slot" to="ActionBar/quote_slot" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="ActionBar/analysis slot" to="ActionBar/analysis slot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ActionBar/analysis slot" to="ActionBar/analysis slot" method="_on_mouse_exited"]

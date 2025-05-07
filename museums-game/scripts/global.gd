@@ -36,7 +36,7 @@ func _transition_to_buddha_minigame(node):
 	var next_scene = null
 	
 	if node == "Scholar":
-		next_scene = preload("res://scenes/quiz.tscn").instantiate()
+		next_scene = preload("res://scenes/timeline_platformer.tscn").instantiate()
 	else:
 		next_scene = preload("res://scenes/kid_chase.tscn").instantiate()
 	
@@ -52,7 +52,7 @@ func _transition_to_buddha_minigame_instructions(node):
 	
 	if node == "Scholar":
 		#update
-		next_scene = preload("res://scenes/quiz.tscn").instantiate()
+		next_scene = preload("res://scenes/scholar_instructions.tscn").instantiate()
 	else:
 		next_scene = preload("res://scenes/kid_chase_instructions.tscn").instantiate()
 	

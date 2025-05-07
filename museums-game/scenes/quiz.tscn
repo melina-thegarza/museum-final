@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/quiz.gd" id="1_meq4f"]
 [ext_resource type="PackedScene" uid="uid://re7uc5qnsekn" path="res://scenes/scholar.tscn" id="2_6105j"]
-[ext_resource type="Texture2D" uid="uid://buwj15pex17x0" path="res://art/character_profiles/exit_button.png" id="3_8mj2w"]
+[ext_resource type="Texture2D" uid="uid://b2to20h6v43p6" path="res://art/character_profiles/exit_button.png" id="3_8mj2w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xxulw"]
 size = Vector2(74.5, 36)
@@ -198,6 +198,7 @@ offset_left = -96.0
 offset_top = -27.0
 offset_right = 68.0
 offset_bottom = 9.0
+metadata/_edit_use_anchors_ = true
 
 [node name="question_label" type="Label" parent="question_area"]
 layout_mode = 0
@@ -225,6 +226,7 @@ theme_override_font_sizes/font_size = 10
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="scholar" parent="." instance=ExtResource("2_6105j")]
 position = Vector2(6, 40)
@@ -238,6 +240,7 @@ offset_bottom = 99.0
 disabled = true
 texture_normal = ExtResource("3_8mj2w")
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="answers/answerA" to="." method="_on_answer_a_body_entered"]
 [connection signal="body_exited" from="answers/answerA" to="." method="_on_answer_a_body_exited"]

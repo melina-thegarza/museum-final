@@ -7746,7 +7746,7 @@ height = 42.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r3nke"]
 radius = 6.0
-height = 38.0
+height = 42.0
 
 [node name="world" type="Node2D"]
 y_sort_enabled = true
@@ -7901,7 +7901,7 @@ texture = ExtResource("7_5dvgs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="vases/vase-3"]
 z_index = 1
-position = Vector2(0, -1)
+position = Vector2(1, 4)
 shape = SubResource("CapsuleShape2D_q7ews")
 
 [node name="vase-4" type="CharacterBody2D" parent="vases"]
@@ -7915,7 +7915,7 @@ texture = ExtResource("7_5dvgs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="vases/vase-4"]
 z_index = 1
-position = Vector2(1, 1)
+position = Vector2(2, 5)
 shape = SubResource("CapsuleShape2D_r3nke")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
