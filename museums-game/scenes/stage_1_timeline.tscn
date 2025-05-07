@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://re7uc5qnsekn" path="res://scenes/scholar.tscn" id="3_kwa88"]
 [ext_resource type="Texture2D" uid="uid://b2to20h6v43p6" path="res://art/character_profiles/exit_button.png" id="7_hj1e1"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nj0hw"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ru17"]
 texture = ExtResource("1_q7ti5")
 16:0/0 = 0
 17:0/0 = 0
@@ -2086,54 +2086,54 @@ texture = ExtResource("1_q7ti5")
 
 [sub_resource type="TileSet" id="TileSet_04yuc"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_nj0hw")
+sources/0 = SubResource("TileSetAtlasSource_4ru17")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fjyg4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_763k2"]
 texture = ExtResource("3_iditb")
 1:5/size_in_atlas = Vector2i(3, 1)
 1:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_3440p"]
-sources/0 = SubResource("TileSetAtlasSource_fjyg4")
+sources/0 = SubResource("TileSetAtlasSource_763k2")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jw2ki"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yc7ow"]
 texture = ExtResource("3_iditb")
 1:4/size_in_atlas = Vector2i(3, 1)
 1:4/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_pychj"]
-sources/0 = SubResource("TileSetAtlasSource_jw2ki")
+sources/0 = SubResource("TileSetAtlasSource_yc7ow")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_okau7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mviar"]
 texture = ExtResource("3_iditb")
 1:3/size_in_atlas = Vector2i(3, 1)
 1:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_opwdn"]
-sources/0 = SubResource("TileSetAtlasSource_okau7")
+sources/0 = SubResource("TileSetAtlasSource_mviar")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yjcqr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rbcru"]
 texture = ExtResource("3_iditb")
 1:2/size_in_atlas = Vector2i(3, 1)
 1:2/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_r17qu"]
-sources/0 = SubResource("TileSetAtlasSource_yjcqr")
+sources/0 = SubResource("TileSetAtlasSource_rbcru")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m6eos"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hbnmw"]
 texture = ExtResource("3_iditb")
 1:1/size_in_atlas = Vector2i(3, 1)
 1:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_3j03k"]
-sources/0 = SubResource("TileSetAtlasSource_m6eos")
+sources/0 = SubResource("TileSetAtlasSource_hbnmw")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v3238"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_750n3"]
 texture = ExtResource("3_iditb")
 2:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_qmnv6"]
-sources/0 = SubResource("TileSetAtlasSource_v3238")
+sources/0 = SubResource("TileSetAtlasSource_750n3")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2rn31"]
 size = Vector2(1028, 46)
@@ -2247,14 +2247,14 @@ theme_override_constants/shadow_outline_size = 6
 theme_override_font_sizes/normal_font_size = 15
 theme_override_font_sizes/bold_font_size = 16
 bbcode_enabled = true
-text = "[b]Obejct agency:[/b]  At its creation, the sculptures primary purpose was to be worshiped and embody divinity."
+text = "[b]Object agency:[/b]  At its creation, the sculptures primary purpose was to be worshiped and embody divinity."
 scroll_active = false
 
 [node name="scenario_label" type="RichTextLabel" parent="labels"]
 offset_left = -446.0
 offset_top = -259.0
 offset_right = -140.0
-offset_bottom = -188.0
+offset_bottom = -143.0
 theme_override_colors/selection_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -2265,7 +2265,7 @@ theme_override_constants/shadow_outline_size = 6
 theme_override_font_sizes/normal_font_size = 15
 theme_override_font_sizes/bold_font_size = 16
 bbcode_enabled = true
-text = "[b]Scenario: [/b]You are a sculptor from the Northern Wei dynasty in China, tasked with creating a large Maitreya image."
+text = "[b]Scenario: [/b]You are a sculptor from the Northern Wei dynasty in China, tasked with creating a large Maitreya image dedicated to the Grand Dowager Empress Feng."
 scroll_active = false
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
@@ -2318,6 +2318,7 @@ offset_bottom = -13.0
 color = Color(0.781843, 0.907999, 0.98809, 1)
 
 [node name="won_label" type="RichTextLabel" parent="won_panel"]
+layout_mode = 0
 offset_left = 17.0
 offset_top = 5.0
 offset_right = 145.0

@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const speed = 200
 @export var gravity = 30
-@export var jump_force = 400
+@export var jump_force = 405
 
 
 

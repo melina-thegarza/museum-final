@@ -40,10 +40,10 @@ position = Vector2(208, 64)
 zoom = Vector2(4, 4)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 35.0
-offset_top = -68.0
-offset_right = 452.0
-offset_bottom = -8.0
+offset_left = 32.0
+offset_top = -110.0
+offset_right = 449.0
+offset_bottom = -50.0
 theme_override_colors/selection_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -53,6 +53,24 @@ theme_override_constants/shadow_offset_x = 6
 theme_override_constants/shadow_outline_size = 6
 theme_override_font_sizes/normal_font_size = 26
 text = "HOW TO PLAY/INSPIRATION"
+scroll_active = false
+
+[node name="movement" type="RichTextLabel" parent="."]
+offset_left = -4.0
+offset_top = -62.0
+offset_right = 413.0
+offset_bottom = -1.0
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[center][b]MOVE: Use the keys[/b]
+[b]JUMP: Use the spacebar[/b]"
 scroll_active = false
 
 [node name="play_btn" type="TextureButton" parent="."]
@@ -94,12 +112,11 @@ theme_override_constants/outline_size = 6
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/shadow_offset_x = 6
 theme_override_constants/shadow_outline_size = 6
-theme_override_font_sizes/normal_font_size = 13
+theme_override_font_sizes/normal_font_size = 12
 theme_override_font_sizes/bold_font_size = 14
 bbcode_enabled = true
-text = "GOAL: ...
-[b]MOVE: Use the keys[/b]
-[b]JUMP: Use the spacebar[/b]"
+text = "GOAL: trace the \"life\" of this particular Maitreya sculpture through different stages, considering how its status, meaning, and potential \"agency\" change over time
+"
 scroll_active = false
 
 [node name="PointLight2D" type="PointLight2D" parent="ActionBar/goal_slot"]
@@ -134,7 +151,7 @@ theme_override_constants/shadow_outline_size = 6
 theme_override_font_sizes/normal_font_size = 13
 theme_override_font_sizes/bold_font_size = 13
 bbcode_enabled = true
-text = "[b]INSPIRED BY: ... [/b], 
+text = "[b]INSPIRED BY: ... [/b], Richard H. Davis, “What Do Indian Images Really Want? A Biographical Approach” in Sacred Objects in Secular Spaces.
 "
 scroll_active = false
 
@@ -161,10 +178,10 @@ theme_override_constants/outline_size = 6
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/shadow_offset_x = 6
 theme_override_constants/shadow_outline_size = 6
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 11
 theme_override_font_sizes/bold_font_size = 12
 bbcode_enabled = true
-text = "QUOTE: "
+text = "QUOTE: “Biographies highlight the ways that identities can be reframed in different settings and renegotiated in encounters with different audiences, Indian images, I contend, want to have their stories told”(Davis 2)"
 scroll_active = false
 
 [node name="analysis slot" type="PanelContainer" parent="ActionBar"]
@@ -193,7 +210,7 @@ theme_override_constants/shadow_outline_size = 6
 theme_override_font_sizes/normal_font_size = 10
 theme_override_font_sizes/bold_font_size = 12
 bbcode_enabled = true
-text = "ANALYSIS:  "
+text = "ANALYSIS:   Davis proposes a [b]\"biographical approach\"[/b] to understanding images, suggesting they have \"lives, just as humans do\". These lives involve experiencing \"birth and destruction, transmission, influence, and celebrity\". "
 scroll_active = false
 
 [connection signal="mouse_entered" from="play_btn" to="." method="_on_play_btn_mouse_entered"]
