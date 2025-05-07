@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://c7ve6pcr3eyhf"]
+[gd_scene load_steps=12 format=4 uid="uid://c7ve6pcr3eyhf"]
 
 [ext_resource type="PackedScene" uid="uid://re7uc5qnsekn" path="res://scenes/scholar.tscn" id="1_72uax"]
 [ext_resource type="Script" path="res://scripts/timeline_platformer.gd" id="1_opcrn"]
 [ext_resource type="Texture2D" uid="uid://che1pmds6lvyy" path="res://art/Interiors_free/48x48/Room_Builder_free_48x48.png" id="2_3yd8v"]
 [ext_resource type="Texture2D" uid="uid://dckfewbmcuw3w" path="res://art/sky.jpg" id="3_c4hed"]
 [ext_resource type="Texture2D" uid="uid://dmw6ontie7bko" path="res://art/items/MysteryBlock.png" id="4_qrf7c"]
+[ext_resource type="Texture2D" uid="uid://b2to20h6v43p6" path="res://art/character_profiles/exit_button.png" id="6_2e2dn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qiaoq"]
 texture = ExtResource("2_3yd8v")
@@ -2106,7 +2107,7 @@ position = Vector2(0, 6)
 
 [node name="platforms" type="TileMapLayer" parent="TileMap"]
 position = Vector2(-2, 0)
-tile_map_data = PackedByteArray("AAD+/wEAAAAAACIAAAD+/wIAAAAAACYAAAD//wEAAAABACIAAAAAAAEAAAAIACIAAAAAAAIAAAAIACYAAAD//wIAAAABACYAAAAEAAAAAAAAACIAAAAFAAAAAAABACIAAAAGAAAAAAAIACIAAAAEAAEAAAAAACYAAAAGAAEAAAAIACYAAAAFAAEAAAAEACYAAAALAAAAAAAAACIAAAALAAEAAAAAACYAAAAMAAAAAAABACIAAAAMAAEAAAAEACYAAAANAAAAAAAIACIAAAANAAEAAAAIACYAAAATAAMAAAAAACIAAAATAAQAAAAAACYAAAAUAAMAAAABACIAAAAUAAQAAAAEACYAAAAVAAMAAAAIACIAAAAVAAQAAAAIACYAAAAdAP3/AAAAACIAAAAdAP7/AAAAACYAAAAeAP3/AAAIACIAAAAeAP7/AAAIACYAAAAkAPz/AAAAACIAAAAkAP3/AAAAACYAAAAlAPz/AAAIACIAAAAlAP3/AAAIACYAAAApAAEAAAAAACIAAAApAAIAAAAAACYAAAAqAAEAAAAIACIAAAAqAAIAAAAIACYAAAAuAP//AAAIACIAAAAuAAAAAAAIACYAAAAtAP//AAAAACIAAAAtAAAAAAAAACYAAAAsAPv/AAAIACIAAAAsAPz/AAAIACYAAAArAPv/AAAAACIAAAArAPz/AAAAACYAAAAZAAAAAAAIACIAAAAZAAEAAAAIACYAAAAYAAAAAAAAACIAAAAYAAEAAAAAACYAAAA=")
+tile_map_data = PackedByteArray("AAD+/wEAAAAAACIAAAD+/wIAAAAAACYAAAD//wEAAAABACIAAAAAAAEAAAAIACIAAAAAAAIAAAAIACYAAAD//wIAAAABACYAAAAEAAAAAAAAACIAAAAFAAAAAAABACIAAAAGAAAAAAAIACIAAAAEAAEAAAAAACYAAAAGAAEAAAAIACYAAAAFAAEAAAAEACYAAAALAAAAAAAAACIAAAALAAEAAAAAACYAAAAMAAAAAAABACIAAAAMAAEAAAAEACYAAAANAAAAAAAIACIAAAANAAEAAAAIACYAAAATAAMAAAAAACIAAAATAAQAAAAAACYAAAAUAAMAAAABACIAAAAUAAQAAAAEACYAAAAVAAMAAAAIACIAAAAVAAQAAAAIACYAAAAdAP3/AAAAACIAAAAdAP7/AAAAACYAAAAeAP3/AAAIACIAAAAeAP7/AAAIACYAAAAkAPz/AAAAACIAAAAkAP3/AAAAACYAAAAlAPz/AAAIACIAAAAlAP3/AAAIACYAAAApAAEAAAAAACIAAAApAAIAAAAAACYAAAAqAAEAAAAIACIAAAAqAAIAAAAIACYAAAAZAAAAAAAIACIAAAAZAAEAAAAIACYAAAAYAAAAAAAAACIAAAAYAAEAAAAAACYAAAArAPv/AAAIACIAAAArAPz/AAAIACYAAAAqAPv/AAAAACIAAAAqAPz/AAAAACYAAAAuAP7/AAAIACIAAAAuAP//AAAIACYAAAAtAP7/AAAAACIAAAAtAP//AAAAACYAAAA=")
 tile_set = SubResource("TileSet_vu5o4")
 
 [node name="background" type="TextureRect" parent="."]
@@ -2200,24 +2201,24 @@ metadata/_edit_use_anchors_ = true
 [node name="mystery_box_level_3" type="CharacterBody2D" parent="boxes"]
 
 [node name="Sprite2D" type="Sprite2D" parent="boxes/mystery_box_level_3"]
-position = Vector2(158, -116)
+position = Vector2(140, -115)
 texture = ExtResource("4_qrf7c")
 
 [node name="area_2d_level_3" type="Area2D" parent="boxes/mystery_box_level_3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boxes/mystery_box_level_3/area_2d_level_3"]
-position = Vector2(158, -116)
+position = Vector2(139, -114)
 shape = SubResource("RectangleShape2D_arwdr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boxes/mystery_box_level_3"]
-position = Vector2(158, -116)
+position = Vector2(140, -114)
 shape = SubResource("RectangleShape2D_1jvlq")
 
 [node name="stage_3_label" type="RichTextLabel" parent="boxes/mystery_box_level_3"]
-offset_left = 71.0
-offset_top = -167.0
-offset_right = 251.0
-offset_bottom = -121.0
+offset_left = 55.0
+offset_top = -166.0
+offset_right = 235.0
+offset_bottom = -120.0
 theme_override_colors/selection_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -2232,7 +2233,15 @@ Press Enter To Start![/center]"
 scroll_active = false
 metadata/_edit_use_anchors_ = true
 
+[node name="exit_button" type="TextureButton" parent="."]
+offset_left = -38.0
+offset_top = 59.0
+offset_right = 22.0
+offset_bottom = 89.0
+texture_normal = ExtResource("6_2e2dn")
+
 [connection signal="body_entered" from="out_of_bounds" to="." method="_on_out_of_bounds_body_entered"]
 [connection signal="body_entered" from="boxes/mystery_box_level_1/area_2d_level_1" to="." method="_on_area_2d_level_1_body_entered"]
 [connection signal="body_entered" from="boxes/mystery_box_level_2/area_2d_level_2" to="." method="_on_area_2d_level_2_body_entered"]
 [connection signal="body_entered" from="boxes/mystery_box_level_3/area_2d_level_3" to="." method="_on_area_2d_level_3_body_entered"]
+[connection signal="pressed" from="exit_button" to="." method="_on_exit_button_pressed"]

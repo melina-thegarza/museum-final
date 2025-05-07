@@ -2206,9 +2206,9 @@ offset_bottom = 351.0
 color = Color(0.96519, 0.93535, 0.831339, 1)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(-36, -74)
-scale = Vector2(2.02568, 1.32639)
-energy = 0.5
+position = Vector2(-2.49992, -96.75)
+scale = Vector2(2.12126, 1.38958)
+energy = 0.6
 texture = ExtResource("1_augte")
 
 [node name="labels" type="Node" parent="."]
@@ -2270,10 +2270,10 @@ Possibilities: (1) educating visitors, (2) representing history, (3) serving as 
 scroll_active = false
 
 [node name="scenario_label" type="RichTextLabel" parent="labels"]
-offset_left = -445.0
+offset_left = -384.0
 offset_top = -374.0
-offset_right = -139.0
-offset_bottom = -258.0
+offset_right = -164.0
+offset_bottom = -193.0
 theme_override_colors/selection_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)

@@ -12,10 +12,27 @@ position = Vector2(5, -54)
 script = ExtResource("1_niip4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-4.76837e-07, -1)
-scale = Vector2(0.732394, 0.574586)
+position = Vector2(5.50001, -7.49998)
+scale = Vector2(0.887324, 0.646409)
 texture = ExtResource("2_0htxq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 23)
+position = Vector2(6, 23)
 shape = SubResource("CapsuleShape2D_nqutw")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -23.0
+offset_top = 8.0
+offset_right = 36.0
+offset_bottom = 52.0
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/normal_font_size = 7
+bbcode_enabled = true
+text = "[center]Queen Mother Pendant Mask: Iyoba"
+scroll_active = false

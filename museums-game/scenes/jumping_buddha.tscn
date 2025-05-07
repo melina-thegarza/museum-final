@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://io4frwtc1re8"]
+
+[ext_resource type="Script" path="res://scripts/jumping_buddha.gd" id="1_p1wau"]
+[ext_resource type="Texture2D" uid="uid://b7cr2rfpe1ehm" path="res://art/objects/buddha.png" id="2_dpqbp"]
+[ext_resource type="Texture2D" uid="uid://cxinhwd3uwt5n" path="res://art/character_profiles/light.jpg" id="3_3n2cy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_djr2e"]
+radius = 21.0
+height = 88.0
+
+[node name="jumping_buddha" type="CharacterBody2D"]
+script = ExtResource("1_p1wau")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, -36)
+scale = Vector2(1.79, 1.755)
+texture = ExtResource("2_dpqbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_djr2e")
+
+[node name="light" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(3, -25)
+scale = Vector2(0.217903, 0.420139)
+texture = ExtResource("3_3n2cy")
+
+[node name="light_timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="light_timer" to="." method="_on_light_timer_timeout"]

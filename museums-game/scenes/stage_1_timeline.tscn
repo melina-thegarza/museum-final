@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://re7uc5qnsekn" path="res://scenes/scholar.tscn" id="3_kwa88"]
 [ext_resource type="Texture2D" uid="uid://b2to20h6v43p6" path="res://art/character_profiles/exit_button.png" id="7_hj1e1"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ru17"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vrr8x"]
 texture = ExtResource("1_q7ti5")
 16:0/0 = 0
 17:0/0 = 0
@@ -2086,54 +2086,54 @@ texture = ExtResource("1_q7ti5")
 
 [sub_resource type="TileSet" id="TileSet_04yuc"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_4ru17")
+sources/0 = SubResource("TileSetAtlasSource_vrr8x")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_763k2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bq210"]
 texture = ExtResource("3_iditb")
 1:5/size_in_atlas = Vector2i(3, 1)
 1:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_3440p"]
-sources/0 = SubResource("TileSetAtlasSource_763k2")
+sources/0 = SubResource("TileSetAtlasSource_bq210")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yc7ow"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bia6x"]
 texture = ExtResource("3_iditb")
 1:4/size_in_atlas = Vector2i(3, 1)
 1:4/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_pychj"]
-sources/0 = SubResource("TileSetAtlasSource_yc7ow")
+sources/0 = SubResource("TileSetAtlasSource_bia6x")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mviar"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ftcb4"]
 texture = ExtResource("3_iditb")
 1:3/size_in_atlas = Vector2i(3, 1)
 1:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_opwdn"]
-sources/0 = SubResource("TileSetAtlasSource_mviar")
+sources/0 = SubResource("TileSetAtlasSource_ftcb4")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rbcru"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qegnr"]
 texture = ExtResource("3_iditb")
 1:2/size_in_atlas = Vector2i(3, 1)
 1:2/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_r17qu"]
-sources/0 = SubResource("TileSetAtlasSource_rbcru")
+sources/0 = SubResource("TileSetAtlasSource_qegnr")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hbnmw"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hqb32"]
 texture = ExtResource("3_iditb")
 1:1/size_in_atlas = Vector2i(3, 1)
 1:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_3j03k"]
-sources/0 = SubResource("TileSetAtlasSource_hbnmw")
+sources/0 = SubResource("TileSetAtlasSource_hqb32")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_750n3"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o75ua"]
 texture = ExtResource("3_iditb")
 2:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_qmnv6"]
-sources/0 = SubResource("TileSetAtlasSource_750n3")
+sources/0 = SubResource("TileSetAtlasSource_o75ua")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2rn31"]
 size = Vector2(1028, 46)

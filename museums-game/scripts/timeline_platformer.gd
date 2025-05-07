@@ -36,3 +36,7 @@ func _on_area_2d_level_3_body_entered(body: Node2D) -> void:
 	if body.has_method("_is_scholar"):
 		current_stage = 3
 		$boxes/mystery_box_level_3/stage_3_label.visible = true
+
+
+func _on_exit_button_pressed() -> void:
+	Global._return_to_buddha_selection()
