@@ -11,9 +11,12 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_yes_button_pressed() -> void:
-	Global._go_stage_timeline(2)
+
 
 
 func _on_no_button_pressed() -> void:
 	Global._restart_stage_timeline()
+
+
+func _on_yes_button_pressed() -> void:
+	Global._go_stage_timeline(2)

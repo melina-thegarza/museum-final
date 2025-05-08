@@ -20,10 +20,6 @@ config/icon="res://art/icon.svg"
 Global="*res://scripts/global.gd"
 Popups="*res://scenes/popups.tscn"
 
-[display]
-
-window/size/mode=3
-
 [input]
 
 KEY_ENTER={

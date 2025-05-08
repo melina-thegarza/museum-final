@@ -2148,9 +2148,9 @@ shape = SubResource("RectangleShape2D_1jvlq")
 
 [node name="stage_1_label" type="RichTextLabel" parent="boxes/mystery_box_level_1"]
 offset_left = 118.0
-offset_top = -113.0
+offset_top = -107.0
 offset_right = 298.0
-offset_bottom = -67.0
+offset_bottom = -61.0
 theme_override_colors/selection_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -2183,9 +2183,9 @@ shape = SubResource("RectangleShape2D_1jvlq")
 
 [node name="stage_2_label" type="RichTextLabel" parent="boxes/mystery_box_level_2"]
 offset_left = -155.0
-offset_top = -153.0
+offset_top = -143.0
 offset_right = 25.0
-offset_bottom = -107.0
+offset_bottom = -97.0
 theme_override_colors/selection_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
