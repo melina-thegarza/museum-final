@@ -2252,9 +2252,9 @@ text = "[b]MOVE: Use the keys[/b]
 scroll_active = false
 
 [node name="agency_label" type="RichTextLabel" parent="labels"]
-offset_left = -142.0
+offset_left = -157.0
 offset_top = -374.0
-offset_right = 149.0
+offset_right = 134.0
 offset_bottom = -214.0
 theme_override_colors/selection_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -2271,9 +2271,9 @@ Possibilities: (1) educating visitors, (2) representing history, (3) serving as 
 scroll_active = false
 
 [node name="scenario_label" type="RichTextLabel" parent="labels"]
-offset_left = -384.0
+offset_left = -417.0
 offset_top = -374.0
-offset_right = -164.0
+offset_right = -197.0
 offset_bottom = -193.0
 theme_override_colors/selection_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)

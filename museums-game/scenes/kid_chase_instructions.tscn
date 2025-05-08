@@ -163,7 +163,7 @@ theme_override_constants/shadow_outline_size = 6
 theme_override_font_sizes/normal_font_size = 10
 theme_override_font_sizes/bold_font_size = 12
 bbcode_enabled = true
-text = "QUOTE: \"...cases can facilitate many encounters that aid visitors’ abilities to [b]connect devotionally [/b]with exhibits.\" - offers a counterpoint to the idea of barriers solely hindering, suggesting they can enable a certain kind of interaction focused on reverence."
+text = "QUOTE: \"...cases can facilitate many encounters that aid visitors’ abilities to [b]connect devotionally [/b]with exhibits.\"(Berns 153) - offers a counterpoint to the idea of barriers solely hindering, suggesting they can enable a certain kind of interaction focused on reverence."
 scroll_active = false
 
 [node name="analysis slot" type="PanelContainer" parent="ActionBar"]
