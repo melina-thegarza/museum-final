@@ -36,15 +36,46 @@ offset_top = 391.0
 offset_right = 765.0
 offset_bottom = 630.0
 
+[node name="Kid" type="Panel" parent="TextureRect/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/HBoxContainer/Kid"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.098
+anchor_bottom = -0.098
+offset_left = -61.0
+offset_top = 9.422
+offset_right = 158.0
+offset_bottom = 241.422
+theme = SubResource("Theme_7eefi")
+texture = ExtResource("3_v40df")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/HBoxContainer/Kid"]
+offset_left = 4.0
+offset_top = 172.0
+offset_right = 153.0
+offset_bottom = 218.0
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/normal_font_size = 31
+text = "CHILD"
+scroll_active = false
+
 [node name="Scholar" type="Panel" parent="TextureRect/HBoxContainer"]
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect/HBoxContainer/Scholar"]
 layout_mode = 0
-offset_left = -68.0
-offset_top = -20.0
-offset_right = 171.0
-offset_bottom = 213.0
+offset_left = 218.0
+offset_top = -22.0
+offset_right = 457.0
+offset_bottom = 211.0
 texture = ExtResource("2_lpdsy")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/HBoxContainer/Scholar/TextureRect"]
@@ -61,37 +92,6 @@ theme_override_constants/shadow_offset_x = 6
 theme_override_constants/shadow_outline_size = 6
 theme_override_font_sizes/normal_font_size = 31
 text = "SCHOLAR"
-scroll_active = false
-
-[node name="Kid" type="Panel" parent="TextureRect/HBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="TextureRect/HBoxContainer/Kid"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = -0.098
-anchor_bottom = -0.098
-offset_left = 240.0
-offset_top = 3.422
-offset_right = 459.0
-offset_bottom = 235.422
-theme = SubResource("Theme_7eefi")
-texture = ExtResource("3_v40df")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/HBoxContainer/Kid"]
-offset_left = 302.0
-offset_top = 172.0
-offset_right = 451.0
-offset_bottom = 218.0
-theme_override_colors/selection_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 6
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/shadow_offset_x = 6
-theme_override_constants/shadow_outline_size = 6
-theme_override_font_sizes/normal_font_size = 31
-text = "CHILD"
 scroll_active = false
 
 [node name="rolelabel2" type="RichTextLabel" parent="TextureRect"]
@@ -152,10 +152,10 @@ stream = ExtResource("7_a778v")
 volume_db = -5.0
 autoplay = true
 
-[connection signal="mouse_entered" from="TextureRect/HBoxContainer/Scholar" to="." method="_on_scholar_mouse_entered"]
-[connection signal="mouse_exited" from="TextureRect/HBoxContainer/Scholar" to="." method="_on_scholar_mouse_exited"]
 [connection signal="mouse_entered" from="TextureRect/HBoxContainer/Kid" to="." method="_on_kid_mouse_entered"]
 [connection signal="mouse_exited" from="TextureRect/HBoxContainer/Kid" to="." method="_on_kid_mouse_exited"]
+[connection signal="mouse_entered" from="TextureRect/HBoxContainer/Scholar" to="." method="_on_scholar_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/HBoxContainer/Scholar" to="." method="_on_scholar_mouse_exited"]
 [connection signal="mouse_entered" from="start" to="." method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="start" to="." method="_on_start_mouse_exited"]
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
