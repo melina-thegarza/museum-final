@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://io4frwtc1re8"]
+[gd_scene load_steps=7 format=3 uid="uid://io4frwtc1re8"]
 
 [ext_resource type="Script" path="res://scripts/jumping_buddha.gd" id="1_p1wau"]
 [ext_resource type="Texture2D" uid="uid://b7cr2rfpe1ehm" path="res://art/objects/buddha.png" id="2_dpqbp"]
 [ext_resource type="Texture2D" uid="uid://cxinhwd3uwt5n" path="res://art/character_profiles/light.jpg" id="3_3n2cy"]
+[ext_resource type="AudioStream" uid="uid://cfsupceqkbxh" path="res://art/sound/22_Slash_04.wav" id="4_qep8j"]
+[ext_resource type="AudioStream" uid="uid://c6xdbp0p3f0qx" path="res://art/sound/02_Heal_02.wav" id="5_5lh67"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_djr2e"]
 radius = 21.0
@@ -27,5 +29,12 @@ texture = ExtResource("3_3n2cy")
 
 [node name="light_timer" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="jump_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qep8j")
+
+[node name="collected_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_5lh67")
+volume_db = 5.0
 
 [connection signal="timeout" from="light_timer" to="." method="_on_light_timer_timeout"]

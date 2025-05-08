@@ -18,6 +18,7 @@ func _on_out_of_bounds_body_entered(body: Node2D) -> void:
 func _on_area_2d_box_1_body_entered(body: Node2D) -> void:
 	if body.has_method('_is_scholar'):
 		$chat_timer.start()
+		$hit_box_sound.play()
 		$cloud.visible = true
 		$cloud/cloud_text.text = "“Devotion to Maitreya, ..., was also widespread during the Northern Wei period. Maitreya is worshipped as a bodhisattva in this cosmic era and as a Buddha in the next.“(Leidy, Denise Patry, et al. 58)"
 
@@ -29,6 +30,7 @@ func _on_chat_timer_timeout() -> void:
 func _on_area_2d_box_2_body_entered(body: Node2D) -> void:
 	if body.has_method('_is_scholar'):
 		$chat_timer.start()
+		$hit_box_sound.play()
 		$cloud.visible = true
 		$cloud/cloud_text.text = "“The rendering of the Buddha’s physique derives from Indian traditions. Broad, flat figures with clinging drapery are typical of sculpture produced in central India in the fifth century, under Gupta rule”(Leidy, Denise Patry, et al. 57)"
 		
@@ -37,6 +39,7 @@ func _on_area_2d_box_2_body_entered(body: Node2D) -> void:
 func _on_area_2d_box_3_body_entered(body: Node2D) -> void:
 	if body.has_method('_is_scholar'):
 		$chat_timer.start()
+		$hit_box_sound.play()
 		$cloud.visible = true
 		$cloud/cloud_text.text = "“The Buddha standing with outstretched arms on a lotus pedestal, seems to be welcoming worshipers.” (Clark 147)"
 

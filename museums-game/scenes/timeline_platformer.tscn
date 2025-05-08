@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://c7ve6pcr3eyhf"]
+[gd_scene load_steps=14 format=4 uid="uid://c7ve6pcr3eyhf"]
 
 [ext_resource type="PackedScene" uid="uid://re7uc5qnsekn" path="res://scenes/scholar.tscn" id="1_72uax"]
 [ext_resource type="Script" path="res://scripts/timeline_platformer.gd" id="1_opcrn"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dckfewbmcuw3w" path="res://art/sky.jpg" id="3_c4hed"]
 [ext_resource type="Texture2D" uid="uid://dmw6ontie7bko" path="res://art/items/MysteryBlock.png" id="4_qrf7c"]
 [ext_resource type="Texture2D" uid="uid://b2to20h6v43p6" path="res://art/character_profiles/exit_button.png" id="6_2e2dn"]
+[ext_resource type="AudioStream" uid="uid://du7ubqc81h57v" path="res://art/sound/game-music-teste-204327-[AudioTrimmer.com].mp3" id="7_kkq4j"]
+[ext_resource type="AudioStream" uid="uid://yvdfe08j440k" path="res://art/sound/39_Block_03.wav" id="8_pgokc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qiaoq"]
 texture = ExtResource("2_3yd8v")
@@ -2107,7 +2109,7 @@ position = Vector2(0, 6)
 
 [node name="platforms" type="TileMapLayer" parent="TileMap"]
 position = Vector2(-2, 0)
-tile_map_data = PackedByteArray("AAD+/wEAAAAAACIAAAD+/wIAAAAAACYAAAD//wEAAAABACIAAAAAAAEAAAAIACIAAAAAAAIAAAAIACYAAAD//wIAAAABACYAAAAEAAAAAAAAACIAAAAFAAAAAAABACIAAAAGAAAAAAAIACIAAAAEAAEAAAAAACYAAAAGAAEAAAAIACYAAAAFAAEAAAAEACYAAAALAAAAAAAAACIAAAALAAEAAAAAACYAAAAMAAAAAAABACIAAAAMAAEAAAAEACYAAAANAAAAAAAIACIAAAANAAEAAAAIACYAAAATAAMAAAAAACIAAAATAAQAAAAAACYAAAAUAAMAAAABACIAAAAUAAQAAAAEACYAAAAVAAMAAAAIACIAAAAVAAQAAAAIACYAAAAdAP3/AAAAACIAAAAdAP7/AAAAACYAAAAeAP3/AAAIACIAAAAeAP7/AAAIACYAAAAkAPz/AAAAACIAAAAkAP3/AAAAACYAAAAlAPz/AAAIACIAAAAlAP3/AAAIACYAAAApAAEAAAAAACIAAAApAAIAAAAAACYAAAAqAAEAAAAIACIAAAAqAAIAAAAIACYAAAAZAAAAAAAIACIAAAAZAAEAAAAIACYAAAAYAAAAAAAAACIAAAAYAAEAAAAAACYAAAArAPv/AAAIACIAAAArAPz/AAAIACYAAAAqAPv/AAAAACIAAAAqAPz/AAAAACYAAAAuAP7/AAAIACIAAAAuAP//AAAIACYAAAAtAP7/AAAAACIAAAAtAP//AAAAACYAAAA=")
+tile_map_data = PackedByteArray("AAD+/wEAAAAAACIAAAD+/wIAAAAAACYAAAD//wEAAAABACIAAAAAAAEAAAAIACIAAAAAAAIAAAAIACYAAAD//wIAAAABACYAAAAEAAAAAAAAACIAAAAFAAAAAAABACIAAAAGAAAAAAAIACIAAAAEAAEAAAAAACYAAAAGAAEAAAAIACYAAAAFAAEAAAAEACYAAAALAAAAAAAAACIAAAALAAEAAAAAACYAAAAMAAAAAAABACIAAAAMAAEAAAAEACYAAAANAAAAAAAIACIAAAANAAEAAAAIACYAAAAdAP3/AAAAACIAAAAdAP7/AAAAACYAAAAeAP3/AAAIACIAAAAeAP7/AAAIACYAAAApAAEAAAAAACIAAAApAAIAAAAAACYAAAAqAAEAAAAIACIAAAAqAAIAAAAIACYAAAAZAAAAAAAIACIAAAAZAAEAAAAIACYAAAAYAAAAAAAAACIAAAAYAAEAAAAAACYAAAArAPv/AAAIACIAAAArAPz/AAAIACYAAAAqAPv/AAAAACIAAAAqAPz/AAAAACYAAAAuAP7/AAAIACIAAAAuAP//AAAIACYAAAAtAP7/AAAAACIAAAAtAP//AAAAACYAAAAkAPz/AAAIACIAAAAkAP3/AAAIACYAAAAjAPz/AAAAACIAAAAjAP3/AAAAACYAAAATAAMAAAABACIAAAATAAQAAAAEACYAAAAUAAMAAAAIACIAAAAUAAQAAAAIACYAAAASAAMAAAAAACIAAAASAAQAAAAAACYAAAA=")
 tile_set = SubResource("TileSet_vu5o4")
 
 [node name="background" type="TextureRect" parent="."]
@@ -2239,6 +2241,15 @@ offset_top = 59.0
 offset_right = 22.0
 offset_bottom = 89.0
 texture_normal = ExtResource("6_2e2dn")
+
+[node name="background_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_kkq4j")
+volume_db = -5.0
+autoplay = true
+
+[node name="hit_box_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_pgokc")
+volume_db = 5.0
 
 [connection signal="body_entered" from="out_of_bounds" to="." method="_on_out_of_bounds_body_entered"]
 [connection signal="body_entered" from="boxes/mystery_box_level_1/area_2d_level_1" to="." method="_on_area_2d_level_1_body_entered"]

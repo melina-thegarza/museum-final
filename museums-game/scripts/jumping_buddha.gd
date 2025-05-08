@@ -12,6 +12,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y += gravity
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
+			$jump_sound.play()
 			velocity.y = -jump_force
 	
 	var horizontal_direction = Input.get_axis("move_left", "move_right")
@@ -20,6 +21,7 @@ func _physics_process(delta: float) -> void:
 	
 func _show_light():
 	$light_timer.start()
+	$collected_sound.play()
 	$light.visible = true
 
 

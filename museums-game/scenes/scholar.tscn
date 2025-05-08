@@ -1,7 +1,8 @@
-[gd_scene load_steps=35 format=3 uid="uid://re7uc5qnsekn"]
+[gd_scene load_steps=36 format=3 uid="uid://re7uc5qnsekn"]
 
 [ext_resource type="Texture2D" uid="uid://t6vy2eho8kxb" path="res://art/characters/nerd.png" id="1_kgthi"]
 [ext_resource type="Script" path="res://scripts/scholar.gd" id="1_rd3f1"]
+[ext_resource type="AudioStream" uid="uid://cfsupceqkbxh" path="res://art/sound/22_Slash_04.wav" id="3_gel0m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o36fq"]
 atlas = ExtResource("1_kgthi")
@@ -270,3 +271,6 @@ position = Vector2(24, -2)
 zoom = Vector2(8, 8)
 limit_smoothed = true
 rotation_smoothing_enabled = true
+
+[node name="jump_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gel0m")

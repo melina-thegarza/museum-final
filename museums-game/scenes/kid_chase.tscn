@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://c083ikxt83b7r"]
+[gd_scene load_steps=15 format=4 uid="uid://c083ikxt83b7r"]
 
 [ext_resource type="TileSet" uid="uid://ql3ldccgowc4" path="res://scenes/world.tres" id="1_gvc2b"]
 [ext_resource type="PackedScene" uid="uid://cw4y0v758bprg" path="res://scenes/kid.tscn" id="2_4m1db"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://5v7jk3ps6u2i" path="res://art/tilesets/plains.png" id="4_rl25n"]
 [ext_resource type="PackedScene" uid="uid://bmthgxouiqhop" path="res://scenes/stone.tscn" id="5_0cckv"]
 [ext_resource type="Script" path="res://scripts/stones.gd" id="5_mle2x"]
+[ext_resource type="AudioStream" uid="uid://c1ba1ao2x1ra1" path="res://art/sound/lofi-song-330550-[AudioTrimmer.com].mp3" id="10_m8vqw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jmb7l"]
 texture = ExtResource("2_vkd1i")
@@ -7800,3 +7801,8 @@ position = Vector2(-40, 280)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.381703, 0.381703, 0.381703, 1)
+
+[node name="background_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_m8vqw")
+volume_db = -10.0
+autoplay = true

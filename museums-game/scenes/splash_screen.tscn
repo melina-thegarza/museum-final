@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://donikrlq3ny1r"]
+[gd_scene load_steps=7 format=4 uid="uid://donikrlq3ny1r"]
 
 [ext_resource type="Script" path="res://scenes/splash_screen.gd" id="1_bntfa"]
 [ext_resource type="TileSet" uid="uid://ql3ldccgowc4" path="res://scenes/world.tres" id="1_kxwml"]
 [ext_resource type="Texture2D" uid="uid://cxinhwd3uwt5n" path="res://art/character_profiles/light.jpg" id="2_wyjat"]
 [ext_resource type="Texture2D" uid="uid://dqilaydwng51q" path="res://art/Interiors_free/play_button.png" id="3_iwmb6"]
 [ext_resource type="Texture2D" uid="uid://c4qoj1yuol6jw" path="res://art/Interiors_free/instructions_button.png" id="4_nvvwr"]
+[ext_resource type="AudioStream" uid="uid://yhm2wje7d8m4" path="res://art/sound/90x27s-lofi-city-lofi-music-332737.mp3" id="6_o6xj8"]
 
 [node name="splash_screen" type="Node2D"]
 script = ExtResource("1_bntfa")
@@ -69,6 +70,10 @@ theme_override_constants/shadow_outline_size = 6
 theme_override_font_sizes/normal_font_size = 19
 text = "SACRED  OBJECTS"
 scroll_active = false
+
+[node name="background_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_o6xj8")
+autoplay = true
 
 [connection signal="mouse_entered" from="start_button" to="." method="_on_start_button_mouse_entered"]
 [connection signal="mouse_exited" from="start_button" to="." method="_on_start_button_mouse_exited"]

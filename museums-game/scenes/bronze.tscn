@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dreet6mywtew0"]
+[gd_scene load_steps=13 format=3 uid="uid://dreet6mywtew0"]
 
 [ext_resource type="Script" path="res://scripts/bronze.gd" id="1_lgmur"]
 [ext_resource type="Texture2D" uid="uid://w6f8edau2eay" path="res://art/items/bronze.png" id="2_6fqaq"]
+[ext_resource type="AudioStream" uid="uid://bdddvbvoaitp7" path="res://art/sound/013_Confirm_03.wav" id="3_oogsf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bxjbm"]
 atlas = ExtResource("2_6fqaq")
@@ -80,4 +81,11 @@ shape = SubResource("CircleShape2D_5r17t")
 position = Vector2(3, -3)
 shape = SubResource("CircleShape2D_iy2dy")
 
+[node name="collected" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_oogsf")
+
+[node name="coin_timer" type="Timer" parent="."]
+wait_time = 0.05
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="coin_timer" to="." method="_on_coin_timer_timeout"]

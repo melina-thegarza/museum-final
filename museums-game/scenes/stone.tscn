@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmthgxouiqhop"]
+[gd_scene load_steps=6 format=3 uid="uid://bmthgxouiqhop"]
 
 [ext_resource type="Texture2D" uid="uid://dlnyk6n1a4jid" path="res://art/items/Stone.png" id="1_2ejja"]
 [ext_resource type="Script" path="res://scripts/stone.gd" id="1_xcsjg"]
+[ext_resource type="AudioStream" uid="uid://yvdfe08j440k" path="res://art/sound/39_Block_03.wav" id="3_561nk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5r17t"]
 radius = 11.0
@@ -28,4 +29,12 @@ shape = SubResource("CircleShape2D_5r17t")
 position = Vector2(-14, 2)
 shape = SubResource("CircleShape2D_iy2dy")
 
+[node name="sound_bite" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_561nk")
+volume_db = 5.0
+
+[node name="timer" type="Timer" parent="."]
+wait_time = 0.2
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]

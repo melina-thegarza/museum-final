@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://bam7q4bmh2f50"]
+[gd_scene load_steps=30 format=4 uid="uid://bam7q4bmh2f50"]
 
 [ext_resource type="Texture2D" uid="uid://che1pmds6lvyy" path="res://art/Interiors_free/48x48/Room_Builder_free_48x48.png" id="1_2d54f"]
 [ext_resource type="Texture2D" uid="uid://cxinhwd3uwt5n" path="res://art/character_profiles/light.jpg" id="1_augte"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dmw6ontie7bko" path="res://art/items/MysteryBlock.png" id="7_s5sn2"]
 [ext_resource type="Texture2D" uid="uid://d2st5yy7bpuo2" path="res://art/character_profiles/pngtree-pixel-speech-bubble-png-image_6129517.png" id="8_svaqe"]
 [ext_resource type="Texture2D" uid="uid://c7p488y0uw1a6" path="res://art/objects/Ship_portal_32x32.png" id="9_ai3ul"]
+[ext_resource type="AudioStream" uid="uid://yvdfe08j440k" path="res://art/sound/39_Block_03.wav" id="10_6imkm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6fsq3"]
 texture = ExtResource("1_2d54f")
@@ -2422,6 +2423,10 @@ shape = SubResource("CircleShape2D_ly14u")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="end_of_game"]
 position = Vector2(271, 29)
 shape = SubResource("RectangleShape2D_ynmiq")
+
+[node name="hit_box_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_6imkm")
+volume_db = 5.0
 
 [connection signal="body_entered" from="out_of_bounds" to="." method="_on_out_of_bounds_body_entered"]
 [connection signal="body_entered" from="boxes/mystery_box_1/area_2d_box_1" to="." method="_on_area_2d_box_1_body_entered"]

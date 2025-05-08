@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ht8s3arlfwyw"]
+[gd_scene load_steps=11 format=3 uid="uid://ht8s3arlfwyw"]
 
 [ext_resource type="Texture2D" uid="uid://d0kmaljk0k002" path="res://art/tilesets/museum_background.jpg" id="1_mw17e"]
 [ext_resource type="Script" path="res://scripts/selection_screen.gd" id="1_sgy8x"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cis5pv14jr32u" path="res://art/character_profiles/kid_profile.png" id="3_v40df"]
 [ext_resource type="Texture2D" uid="uid://gno70deprj8y" path="res://art/buttons/start_button.png" id="5_khjer"]
 [ext_resource type="Texture2D" uid="uid://dlyg1d18nmkmb" path="res://art/buttons/exit_button.png" id="6_6tou6"]
+[ext_resource type="AudioStream" uid="uid://c1ba1ao2x1ra1" path="res://art/sound/lofi-song-330550-[AudioTrimmer.com].mp3" id="7_a778v"]
 
 [sub_resource type="FontFile" id="FontFile_a05p0"]
 subpixel_positioning = 0
@@ -166,6 +167,11 @@ theme_override_font_sizes/normal_font_size = 21
 text = "WARNING: You need to select a character to start!"
 fit_content = true
 scroll_active = false
+
+[node name="background_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_a778v")
+volume_db = -5.0
+autoplay = true
 
 [connection signal="mouse_entered" from="TextureRect/HBoxContainer/Scholar" to="." method="_on_scholar_mouse_entered"]
 [connection signal="mouse_exited" from="TextureRect/HBoxContainer/Scholar" to="." method="_on_scholar_mouse_exited"]

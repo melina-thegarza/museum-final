@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://cid54ltpguvc"]
+[gd_scene load_steps=8 format=4 uid="uid://cid54ltpguvc"]
 
 [ext_resource type="Texture2D" uid="uid://che1pmds6lvyy" path="res://art/Interiors_free/48x48/Room_Builder_free_48x48.png" id="1_1sge8"]
 [ext_resource type="Script" path="res://scripts/instructions_screen.gd" id="1_61gbe"]
 [ext_resource type="Texture2D" uid="uid://cxinhwd3uwt5n" path="res://art/character_profiles/light.jpg" id="2_a3n66"]
 [ext_resource type="Texture2D" uid="uid://dqilaydwng51q" path="res://art/Interiors_free/play_button.png" id="3_66c6x"]
+[ext_resource type="AudioStream" uid="uid://yhm2wje7d8m4" path="res://art/sound/90x27s-lofi-city-lofi-music-332737.mp3" id="5_iu8pd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jsyap"]
 texture = ExtResource("1_1sge8")
@@ -2134,6 +2135,11 @@ offset_top = 132.0
 offset_right = 44.0
 offset_bottom = 169.0
 texture_normal = ExtResource("3_66c6x")
+
+[node name="background_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_iu8pd")
+volume_db = -5.0
+autoplay = true
 
 [connection signal="mouse_entered" from="start_btn" to="." method="_on_start_btn_mouse_entered"]
 [connection signal="mouse_exited" from="start_btn" to="." method="_on_start_btn_mouse_exited"]
